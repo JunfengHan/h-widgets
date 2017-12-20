@@ -1,0 +1,257 @@
+/*------------------------------------*\
+
+    @Tab
+
+\*------------------------------------*/
+
+.tab {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.tab:after,.tab:before {
+	content: "";
+	display: table;
+}
+
+.tab:after {
+	clear: both;
+}
+
+.tab>li {
+	margin-bottom: -1px;
+	float: left;
+	position: relative;
+}
+
+.tab>li>a {
+	display: block;
+	padding: 8px 12px;
+	border: 1px solid transparent;
+	border-bottom-width: 0;
+	color: #07d;
+	text-decoration: none;
+}
+
+.tab>li:nth-child(n+2)>a {
+	margin-left: 5px;
+}
+
+.tab>li.uk-open>a,.tab>li>a:focus,.tab>li>a:hover {
+	border-color: #f5f5f5;
+	background: #f5f5f5;
+	color: #059;
+	outline: 0;
+}
+
+.tab>li.uk-open:not(.active)>a,.tab>li:not(.active)>a:focus,.tab>li:not(.active)>a:hover {
+	margin-bottom: 1px;
+	padding-bottom: 7px;
+}
+
+.tab>li.active>a {
+	border-color: #ddd #ddd transparent;
+	background: #fff;
+	color: #444;
+}
+
+.tab>li.uk-disabled>a {
+	color: #999;
+	cursor: text;
+}
+
+.tab>li.uk-disabled.active>a,.tab>li.uk-disabled>a:focus,.tab>li.uk-disabled>a:hover {
+	background: 0 0;
+	border-color: transparent;
+}
+
+.tab-flip>li {
+	float: right;
+}
+
+.tab-flip>li:nth-child(n+2)>a {
+	margin-left: 0;
+	margin-right: 5px;
+}
+
+.tab>li.tab-responsive>a {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.tab-responsive>a:before {
+	content: "\f0c9\00a0";
+	font-family: FontAwesome;
+}
+
+.tab-center {
+	border-bottom: 1px solid #ddd;
+}
+
+.tab-center-bottom {
+	border-bottom: none;
+	border-top: 1px solid #ddd;
+}
+
+.tab-center:after,.tab-center:before {
+	content: "";
+	display: table;
+}
+
+.tab-center:after {
+	clear: both;
+}
+
+.tab-center .tab {
+	position: relative;
+	right: 50%;
+	border: none;
+	float: right;
+}
+
+.tab-center .tab>li {
+	position: relative;
+	right: -50%;
+}
+
+.tab-center .tab>li>a {
+	text-align: center;
+}
+
+.tab-bottom {
+	border-top: 1px solid #ddd;
+	border-bottom: none;
+}
+
+.tab-bottom>li {
+	margin-top: -1px;
+	margin-bottom: 0;
+}
+
+.tab-bottom>li>a {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-bottom-width: 1px;
+	border-top-width: 0;
+}
+
+.tab-bottom>li.uk-open:not(.active)>a,.tab-bottom>li:not(.active)>a:focus,.tab-bottom>li:not(.active)>a:hover {
+	margin-bottom: 0;
+	margin-top: 1px;
+	padding-bottom: 8px;
+	padding-top: 7px;
+}
+
+.tab-bottom>li.active>a {
+	border-top-color: transparent;
+	border-bottom-color: #ddd;
+}
+
+.tab-grid {
+	margin-left: -5px;
+	border-bottom: none;
+	position: relative;
+	z-index: 0;
+}
+
+.tab-grid:before {
+	display: block;
+	position: absolute;
+	left: 5px;
+	right: 0;
+	bottom: -1px;
+	border-top: 1px solid #ddd;
+	z-index: -1;
+}
+
+.tab-grid>li:first-child>a {
+	margin-left: 5px;
+}
+
+.tab-grid>li>a {
+	text-align: center;
+}
+
+.tab-grid.tab-bottom {
+	border-top: none;
+}
+
+.tab-grid.tab-bottom:before {
+	top: -1px;
+	bottom: auto;
+}
+
+@media (min-width: 768px) {
+	.tab-left,.tab-right {
+		border-bottom:none;
+	}
+
+	.tab-left>li,.tab-right>li {
+		margin-bottom: 0;
+		float: none;
+	}
+
+	.tab-left>li>a,.tab-right>li>a {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	.tab-left>li:nth-child(n+2)>a,.tab-right>li:nth-child(n+2)>a {
+		margin-left: 0;
+		margin-top: 5px;
+	}
+
+	.tab-left>li.active>a,.tab-right>li.active>a {
+		border-color: #ddd;
+	}
+
+	.tab-left {
+		border-right: 1px solid #ddd;
+	}
+
+	.tab-left>li {
+		margin-right: -1px;
+	}
+
+	.tab-left>li>a {
+		border-bottom-width: 1px;
+		border-right-width: 0;
+	}
+
+	.tab-left>li:not(.active)>a:focus,.tab-left>li:not(.active)>a:hover {
+		margin-bottom: 0;
+		margin-right: 1px;
+		padding-bottom: 8px;
+		padding-right: 11px;
+	}
+
+	.tab-left>li.active>a {
+		border-right-color: transparent;
+	}
+
+	.tab-right {
+		border-left: 1px solid #ddd;
+	}
+
+	.tab-right>li {
+		margin-left: -1px;
+	}
+
+	.tab-right>li>a {
+		border-bottom-width: 1px;
+		border-left-width: 0;
+	}
+
+	.tab-right>li:not(.active)>a:focus,.tab-right>li:not(.active)>a:hover {
+		margin-bottom: 0;
+		margin-left: 1px;
+		padding-bottom: 8px;
+		padding-left: 11px;
+	}
+
+	.tab-right>li.active>a {
+		border-left-color: transparent;
+	}
+}

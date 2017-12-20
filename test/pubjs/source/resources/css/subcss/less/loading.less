@@ -1,0 +1,67 @@
+/*------------------------------------*\
+
+    @Loading
+
+\*------------------------------------*/
+
+
+@-webkit-keyframes anim-rotate {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg)
+    }
+}
+
+@keyframes anim-rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(359deg)
+    }
+}
+
+
+.anim-spin {
+    display: inline-block;
+    -webkit-animation: anim-rotate 2s infinite linear;
+    animation: anim-rotate 2s infinite linear
+}
+
+
+.loadingBox {
+	font-size: @baseline-size * 5;
+	color: @base-white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -@baseline-size * 5/2;
+	margin-top: -@baseline-size * 5/2;
+}
+
+.G-loading {
+	background: @base-mask;
+	font-size: @baseline-size * 4;
+	.opacity(0.4);
+	width: 100% !important;
+	height: 100% !important;
+	i {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -@baseline-size * 4/2;
+		margin-top: -@baseline-size * 4/2;
+	}
+
+	&.noMask {
+		background: none;
+		.opacity(1);
+		i {
+			color: @base-white;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+.M-excelGrid {
+	& .M-HighGrid{
+		&List {
+			&Layout {
+
+			}
+			&Top {
+				overflow: hidden;
+				td:last-child {
+					border-right-color: #EAEAEA;
+				}
+			}
+			&Head {
+				background: #F8F8F8;
+				td {
+					text-align: center;
+					border-bottom: 1px solid #C8CDCC;
+					border-right: 1px solid transparent;
+				}
+				i.metricTip{
+					display: inline-block;
+					vertical-align: -3px;
+					margin: 0 0 0 2px;
+					// position: absolute;
+					// top: -4px;
+					// right: 0px;
+					.icon;
+					.icon-qustionMark;
+				}
+			}
+			&Body {
+				overflow:hidden;
+				position:relative;
+
+				tr.even {
+					background: #FFF;
+				}
+
+				// 操作图标
+				&Menu{
+					cursor: pointer;
+					display: inline-block;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-left: -9px;
+					margin-top: -9px;
+					color: #bbb;
+					font-size: 18px;
+					&:hover {
+						color: #aaa;
+					}
+				}
+			}
+			&Content {
+				min-height: 100% !important;
+			}
+
+		}
+	}
+}

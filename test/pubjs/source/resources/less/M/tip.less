@@ -1,0 +1,115 @@
+.M-tip {
+	position:absolute;
+	min-width:100px;
+	background:#555;
+	border-radius: 7px;
+	box-shadow:rgba(0, 0, 0, 0.4) 0 0.1em 0.6em;
+	z-index: 10000;
+	opacity: 0;
+	transition: 'opacity';
+
+	&Content {
+		margin: 5px;
+		padding: 10px;
+		background:#fff;
+		overflow:hidden;
+		border-radius: 5px;
+	}
+
+	&Arrow {
+		position:absolute;
+
+		&tL, &tm, &tR {
+			border-top-color: #555;
+		}
+		&bL, &bm, &bR {
+			border-bottom-color: #555;
+		}
+		&mr {
+			border-right-color: #555;
+		}
+		&ml {
+			border-left-color: #555;
+		}
+	}
+
+
+	&Body{
+		min-height:50px;
+		padding:10px;
+		line-height:1.8em;
+		b {
+			padding:0;
+			font-weight:bold;
+			font-size:1.5em;
+			letter-spacing:3px;
+			vertical-align:baseline;
+		}
+	}
+	&Foot{
+		display:none;
+	}
+	&Head{
+		display:none;
+	}
+	&Act {
+		opacity: 1;
+	}
+}
+
+.M-tooltip {
+	display: none;
+	position:absolute;
+	min-width:100px;
+	min-height: 50px;
+	background:#fff;
+	border-radius: 0px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+	z-index: 9999;
+	opacity: 0;
+	transition: 'opacity';
+
+	.M-tipContent {
+		margin: 0;
+		padding: 0;
+		background:#fff;
+		// overflow:hidden;
+		border-radius: 0;
+		overflow: inherit;
+	}
+
+	.M-tipArrow {
+		position:absolute;
+
+		&tL, &tm, &tR {
+			border-top-color: #A1A1A1;
+		}
+		&bL, &bm, &bR {
+			border-bottom-color: #A1A1A1;
+		}
+		&mr {
+			border-right-color: #A1A1A1;
+		}
+		&ml {
+			border-left-color: #A1A1A1;
+		}
+		&.left {
+			right: auto !important;
+		}
+		&.right {
+			left: auto !important;
+		}
+		&.custom {
+			.icon();
+			.icon-triangle-top;
+		}
+	}
+}
+
+// 问号
+.M-tipDesc {
+	display: inline-block;
+	vertical-align: middle;
+	.icon;
+	.icon-formQuestionMark;
+}

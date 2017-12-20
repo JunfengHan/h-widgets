@@ -1,0 +1,655 @@
+.M-common {
+	&Scroller {
+		position: absolute;
+		overflow: hidden;
+		//border-radius: 4px;
+		opacity: 0.3;
+
+		&:hover, &.act{
+			opacity: 1;
+			background: #EEE;
+			background: rgba(250,250,250,0.2);
+			box-shadow: rgba(128, 128, 128, .2) 1px 0 4px inset;
+			//padding: 4px !important;
+			//border-radius: 8px;
+			>div {
+				opacity: 0.3;
+				//padding: 4px !important;
+				//border-radius: 8px;
+			}
+		}
+
+		div {
+			position: absolute;
+			left: 0;
+			top: 0;
+			box-shadow: rgba(0, 0, 0, .3) 0 0 8px inset;
+			background: #C3C3C3;
+			border-radius: 4px;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.3;
+				background: #999;
+				//padding: 4px !important;
+				//border-radius: 8px;
+			}
+		}
+
+		&.act div {
+			opacity: 0.3;
+			background: #999;
+			padding: 4px !important;
+			//border-radius: 8px;
+		}
+	}
+
+	&Dropdown{
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+
+		.arrow {
+			i {
+				display: inline-block;
+				vertical-align: sub;
+			}
+		}
+
+		.result {
+			font-size: 12px;
+		}
+
+		&List {
+			left: 0px;
+			z-index: 1;
+			cursor: default;
+			background: white;
+			position: absolute;
+			border-radius: 3px;
+			border: 1px solid #ccc;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			//box-shadow: rgba(0,0,0,0.2) 0 2px 3px;
+			// box-shadow: 2px 3px 9px #CCC;
+			.search {
+				padding: 5px;
+				// border-bottom: 1px solid #CCC;
+				position: relative;
+
+				input {
+					// width: auto;
+					// display: block;
+					text-indent: 20px;
+					width: 100% !important;
+				}
+			}
+			.btnSearch, .btnCancel {
+				display: block;
+				width: 30px;
+				position: absolute;
+				top: 50%;
+				left: 2px;
+				cursor: pointer;
+				margin-top: -15px;
+			}
+			.btnSearch{
+				.icon();
+				.icon-searchBtnGo;
+			}
+			.btnCancel{
+				display: none;
+				.icon();
+				.icon-searchBtnDel;
+
+			}
+			.dragIcon{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				z-index: 1;
+				cursor: pointer;
+				.icon();
+				.icon-drag();
+				cursor: se-resize;
+			}
+
+			.options {
+				//margin-top: -1px;
+				min-width: 100px;
+			}
+			.option {
+				color: #333;
+				padding: 6px 5px 6px 5px;
+				display: block;
+				//border-top: 1px solid #ccc;
+				background:#fff;
+				text-decoration: none;
+				//#lib > .transition(background,.1s);
+				&:hover {
+					background:#f0f0f0;
+					// box-shadow:rgba(255, 255, 255,0.8) 0 1px 1px inset,rgba(255, 255, 255,.8) 0 -1px 1px inset;
+				}
+
+				&.act {
+					font-weight: 700;
+					color: #333;
+					cursor: default;
+					font-weight: bold;
+					background-color: #f7f7f7;
+				}
+
+				&.has-sub {
+					// background: #f8f8f8;
+					i {
+						float: right;
+						font-size: 18px;
+						color: #aaa;
+					}
+					&:hover {
+						background:#f0f0f0;
+					}
+				}
+
+				&.highlight {
+					background: #f5f5f5;
+				}
+			}
+
+			.sub-list {
+				.subs {
+					position: absolute;
+					margin-left: 8px;
+					border: 1px solid #CCC;
+					border-radius: 3px;
+					background: white;
+					cursor: default;
+					min-width: 100px;
+					display: none;
+					box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+				}
+				.sub_arrow {
+					position: absolute;
+					left: -16px;
+					width: 0px;
+					height: 0px;
+					overflow: hidden;
+					border: 8px solid transparent;
+					border-right-color: #ccc;
+					top: 50%;
+					margin-top: -8px;
+				}
+			}
+		}
+	}
+
+	&FloatDropdown {
+		border:none;
+		background:none;
+		position:absolute;
+		border-radius:none;
+		.list {
+			top:0!important;
+			opacity: 0.99;
+			border-radius: 4px;
+			border: 2px solid #555;
+			.option {
+				color: #fff;
+				padding: 10px;
+				background:#555;
+				white-space: nowrap;
+				border-top: none;
+				&:hover {
+					background:#444;
+					box-shadow:none;
+				}
+
+				&.act {
+					color:#333;
+					cursor:default;
+					font-weight:700;
+				}
+
+				&.has-sub {
+					background: #555;
+				}
+				&.has-sub:hover{
+					background: #444;
+				}
+			}
+			.sub-list {
+				.subs {
+					background: #555;
+					border-radius: 4px;
+					border: 2px solid #555;
+				}
+				.sub_arrow {
+					border-right-color: #555;
+				}
+				.sub_right_arrow {
+					border-right-color:rgba(0,0,0,0);
+					border-left-color:#555;
+				}
+			}
+			.nonData {
+				cursor:default;
+				text-align:center;
+				color:#999;
+				background:#555;
+
+				&:hover {
+					background:#555;
+				}
+			}
+		}
+	}
+
+	&Input {
+		position: relative;
+		&Placeholder {
+			color: #999;
+		}
+		&Prefix {
+			display: block;
+			position: absolute;
+			left: 4px;
+			top: 50%;
+			margin-top: -7px;
+		}
+		&Suffix {
+			padding: 0 5px;
+		}
+	}
+
+	&Item {
+		//padding: 8px 0;
+		position: relative;
+
+		&Con {
+			display: inline-block;
+			padding-left: 2px;
+			vertical-align: middle;
+			input {
+				vertical-align: middle;
+			}
+			&.custom {
+				label {
+					color: #646464;
+				}
+				input {
+					display: none;
+				}
+			}
+			&.change {
+				label {
+					color: #58aedd !important;
+					.custom-checkbox {
+						border-color: #58aedd;
+						i {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		&Tools {
+			position: relative;
+			margin-bottom: 10px;
+			.M-commonSearch {
+				display: inline-block;
+				margin-right: 20px;
+			}
+			>input {
+				vertical-align: middle;
+			}
+		}
+
+		&Radio {
+			// width: 90%;
+			vertical-align: middle;
+			padding: 0 20px 0 5px;
+			cursor: pointer;
+			input {
+				display: none;
+			}
+			.custom-checkbox {
+				cursor: pointer;
+				position: relative;
+				font-size: 14px;
+
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				border: 1px solid #bbb;
+				border-radius: 4px;
+				vertical-align: -2px;
+				margin-right: 5px;
+
+				i {
+					position: absolute;
+					left: -1px;
+					top: -1px;
+					display: none;
+					// color: #333333;
+					color: #58aedd;
+				}
+			}
+		}
+		&RadioDisabled {
+			color: #BFBFBF;
+		}
+		&RadioIsolation {
+			margin: 5px 0;
+		}
+		&Tips {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	&FlexibleInput{
+		&Wrap{
+			position: relative;
+			display: inline-block;
+		}
+		&Div{
+			margin-bottom: 5px;
+			position: relative;
+			input {
+				padding-right: 20px;
+			}
+		}
+		&Add{
+			position: absolute;
+			bottom: 10px;
+			right: -30px;
+			display: inline-block;
+			background-color: rgb(213, 213, 213);
+			color: #fff;
+			font-size: 14px;
+			cursor: pointer;
+			// padding: 0 1px 3px 1px;
+			border-radius: 4px;
+			height: 20px;
+			width: 20px;
+			&:hover{
+				background-color: #888;
+			}
+			i {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -7px;
+				margin-top: -7px;
+			}
+		}
+		&Del{
+			position: absolute;
+			display: none;
+			right: 6px;
+			top: 9px;
+			color: rgb(145, 145, 145);
+			cursor: pointer;
+			&:hover{
+				color: #111;
+			}
+		}
+	}
+
+	&Pager {
+
+		.layout-row {
+			margin: 0;
+			.layout-col {
+				padding: 0;
+				display: inline-block;
+				width: auto;
+				float: none;
+			}
+		}
+
+		input, button {
+			height: 28px;
+			margin: 0 1px;
+		}
+
+		&Box {
+			margin: 0px 10px;
+			span {
+				margin-right: 10px;
+			}
+			select {
+				height: 28px;
+				width: 60px;
+				cursor: pointer;
+				border-radius: 4px;
+				border-color: #cccccc;
+				&:focus {
+					outline: 0;
+				}
+			}
+		}
+		&Info {
+			margin-right: 10px;
+		}
+		&GotoBox {
+			margin-left: 5px;
+		}
+
+		&Goto {
+			width: 40px;
+		}
+
+		&Active, &Active:hover, &Active:focus {
+			background: #535B5E !important;
+			color: #fff;
+			cursor: default;
+		}
+	}
+
+	&Search {
+		position: relative;
+		&InputCon {
+			position: relative;
+		}
+		&Input {
+		}
+
+		.arrow {
+			cursor: pointer;
+			position: relative;
+			width: 30px;
+		}
+
+		&Do {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			.icon();
+			.icon-searchBtnGo;
+		}
+		&Undo {
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			right: 40px;
+			top: 0px;
+			display: none;
+			// .icon();
+			// .icon-searchBtnDel;
+			top: 50%;
+			margin-top: -5px;
+		}
+		&Words {
+			position: absolute;
+			left: 0px;
+			top: 8px;
+			width: 30px;
+			height: 16px;
+			border-right: 1px solid #ececec;
+			cursor: pointer;
+			i {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -4px;
+				margin-top: -3px;
+				&:hover {
+					border-top-color: #000;
+				}
+			}
+		}
+
+		&.hasWords {
+			input {
+				padding-left: 35px;
+			}
+		}
+
+		&.simple {
+			.form-element-group {
+				display: block;
+			}
+			.M-commonSearchInput {
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+				padding-right: 30px;
+			}
+			.M-commonSearchUndo {
+				right: 30px;
+				background: #fff;
+				margin-top: -6px;
+			}
+			.arrow {
+				background: none;
+				border: none;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+			.iconCon {
+				right: 10px;
+			}
+		}
+
+	}
+	&WordsSearch {
+		padding: 20px;
+		position: relative;
+		.title {
+			font-size: 14px;
+			float: left;
+		}
+		.desc {
+			font-size: 12px;
+			color: #ccc;
+			float: left;
+			margin: 2px 0 10px 10px;
+		}
+		textarea {
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+			height: 100px;
+		}
+		button {
+			margin: 0 auto;
+			display: inherit;
+			width: 80px;
+		}
+		i {
+			top: 5px;
+			right: 5px;
+			cursor: pointer;
+			overflow: hidden;
+			position: absolute;
+			font-size: 14px;
+			&:hover {
+				background-color: #f2f2f2;
+			}
+		}
+	}
+
+	&SearchOld {
+		&Input {
+			width: 300px;
+			min-height: 30px;
+			vertical-align: middle;
+			padding: 0 5px;
+		}
+		&Undo {
+			display: none;
+		}
+
+		.uk-button {
+			margin-left: 10px;
+		}
+		&Do {
+			background: 'uk-icon-search'
+		}
+	}
+
+	&Loading {
+		display: none;
+		position: absolute;
+		z-index: 10000;
+		background: #cccccc;
+		font-size: 4rem;
+		opacity: 0.4;
+		top: 0;
+		left: 0;
+		i {
+			font-size: 1rem * 4;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -1rem * 4 / 2;
+			margin-top: -1rem * 4 / 2;
+		}
+		&.noMask {
+			background: none;
+			opacity: 1;
+			i {
+				color: #FFFFFF;
+			}
+		}
+		&.small {
+			background: #ececec;
+			font-size: 3rem;
+			i {
+				font-size: 1rem * 3;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -1rem * 3 / 2;
+				margin-top: -1rem * 3 / 2;
+			}
+		}
+	}
+
+	&Checkbox,&Radio {
+		padding-top: 5px;
+		label{
+			input{
+				vertical-align: middle;
+				margin: 0 5px 0 10px;
+			}
+			span{
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&RadioGroup {
+		label {
+			margin-right: 15px;
+		}
+	}
+
+	&Excel {
+		button {
+			vertical-align: middle;
+		}
+	}
+}

@@ -1,0 +1,78 @@
+/*------------------------------------*\
+
+    @Frame
+
+\*------------------------------------*/
+
+html {
+	height: 100%;
+	font: @font-family-weight 14px / 20px @primary-font;
+	// font-size: 14px;
+}
+
+body {
+	height: 100%;
+	background-color: @base-under-bg;
+	color: @text-color;
+	font-family: @primary-font;
+	font-weight: @font-family-weight;
+	font-size: 12px;
+	line-height: @base-line-height;
+	margin: 0;
+	padding: 0;
+	// -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	// -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+	.box-sizing(border-box);
+}
+
+a {
+	color: @link-color;
+	text-decoration: none;
+	cursor: pointer;
+	.transition(all .25s ease);
+}
+
+a:hover {
+	color: @link-color-hover;
+	text-decoration: none;
+}
+
+ul, ol {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+
+hr {
+	.hr(1px, @base-color-eee);
+}
+
+label {
+	vertical-align: middle;
+	display: inline-block;
+	>input {
+		vertical-align: middle;
+		margin-right: 2px;
+	}
+}
+
+em, i {
+	font-style: normal;
+}
+
+// ::-webkit-scrollbar {
+// 	width: 8px;
+// 	height: 8px;
+// 	background-color: rgba(250,250,250,1);
+// }
+// ::-webkit-scrollbar-thumb {
+// 	background-color: rgba(235,87,86,.73);
+// 	-webkit-border-radius: 4px;
+// 	-moz-border-radius: 4px;
+// 	border-radius: 4px;
+// }

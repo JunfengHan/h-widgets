@@ -1,0 +1,136 @@
+.M-dialog {
+	position:absolute;
+	top:120px;
+	left:1%;
+	min-width:350px;
+	_width:350px;
+	background:#fff;
+	//box-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
+	display: none;
+	border-radius: 5px;
+
+
+	&Head{
+		position:relative;
+		padding: 20px 25px 10px 25px;
+		height: auto;
+	}
+	&Title {
+		color: #2a4456;
+		font-size: 16px;
+		font-weight: bold;
+
+	}
+	&Close {
+		top:20px;
+		right:20px;
+		cursor:pointer;
+		overflow:hidden;
+		position:absolute;
+		font-size: 22px;
+
+		&:hover {
+			background-color: #f2f2f2;
+		}
+	}
+	&Body {
+		color: #444;
+		// min-height:120px;
+		// _height:120px;
+		padding: 0 25px 0 25px;
+		font-size: 13px;
+	}
+	&Foot {
+		padding: 10px 25px 20px 25px;
+		text-align:right;
+		// position: absolute;
+		// bottom: 0;
+		// width: 100%;
+		height: auto;
+
+		input {
+			margin:0 0 0 10px;
+		}
+	}
+	&Mask {
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background:#000;
+		z-index: 999;
+		opacity: 0.3;
+	}
+
+	// 系统弹出提示框样式
+	&Alert {
+		position: fixed;
+		top: 50%;
+		font-size: 14px;
+		min-width: 350px;
+		_width:350px;
+
+		.M-dialog {
+			&Body {
+				// min-height:100px;
+				// _height:100px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	&Codecopy {
+		&Note {
+			margin-bottom: 0;
+		}
+		&Code {
+			margin-top: 10px;
+			width: 100%;
+			height: 18em !important;
+		}
+		&Copy {
+			margin: 10px auto 0;
+			min-width: 150px;
+			display: block;
+		}
+	}
+
+	&Notify {
+		position: absolute;
+		left: -500px;
+		top: -500px;
+		padding: 0 14px;
+		border-radius: 4px;
+		//box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+		cursor: pointer;
+		box-shadow: 0 0 8px #fff;
+
+		&Title {
+			font-size: 16px;
+			line-height: 30px;
+		}
+		&Icon {
+			display: none;
+		}
+		&Message {
+			font-size: 14px;
+			letter-spacing: 2px;
+			max-width: 400px;
+			height: 30px;
+			line-height: 30px;
+		}
+	}
+
+	&Loading{
+		top: 50%;
+		left: 50%;
+		width: 16px;
+		height: 16px;
+		margin-top: -8px;
+		margin-left: -8px;
+		position: absolute;
+		display: inline-block;
+		background:url(../images/loading.gif) no-repeat;
+	}
+}

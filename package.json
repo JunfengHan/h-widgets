@@ -1,0 +1,26 @@
+{
+  "name": "widgets",
+  "version": "0.0.1",
+  "description": "widgets base on pubJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.server:aio/widgets.git"
+  },
+  "keywords": [
+    "pubjs",
+    "widgets",
+    "component"
+  ],
+  "author": "sunteng.com@wuhan",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "less": "^2.7.3"
+  }
+}

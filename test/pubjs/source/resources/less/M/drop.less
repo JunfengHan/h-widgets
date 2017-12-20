@@ -1,0 +1,409 @@
+// 新下拉
+.M-drop {
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+
+	.result {
+		font-size: 12px;
+
+		&.multiCon {
+			min-height: 30px;
+			div {
+				float: left;
+				background: #F3F3F3;
+				padding: 0 8px;
+				border-radius: 4px;
+				margin-right: 4px;
+				margin-top: 2px;
+				margin-bottom: 1px;
+				line-height: 18px;
+				cursor: pointer;
+				&:hover {
+					text-decoration: line-through;
+				}
+			}
+			input {
+				border: none;
+				min-width: 20px;
+				float: left;
+				box-shadow: none;
+				padding: 2px 0;
+				margin-right: 4px;
+				margin-top: 2px;
+				margin-bottom: 1px;
+				width: 20px;
+			}
+		}
+	}
+	.arrow {
+		font-size: 12px;
+		i {
+			display: inline-block;
+			vertical-align: sub;
+			margin: 0 1px;
+		}
+	}
+	.iconCon {
+		position: absolute;
+		top: 50%;
+		right: 35px;
+		color: #ccc;
+		font-size: 14px;
+		margin-top: -7px;
+		.do {
+			display: block;
+			cursor: default;
+		}
+		.cancel {
+			display: none;
+		}
+	}
+	.panelCon {
+		width: 100%;
+		position: relative;
+	}
+
+	&.simple {
+		.form-element-group {
+			display: block;
+		}
+		.result {
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			padding-right: 30px;
+		}
+		.arrow {
+			display: none;
+		}
+		.iconCon {
+			right: 10px;
+		}
+	}
+
+	&.gray {
+		.result {
+			color: #333;
+			background: #F6F6F6;
+			border-color: #F6F6F6;
+			padding-left: 7px;
+			padding-right: 7px;
+			border-right-width: 0px;
+			transition: none;
+		}
+		.arrow {
+			background: #F6F6F6;
+			border-color: #F6F6F6;
+			padding-left: 0px;
+			padding-right: 7px;
+			i {
+				border-width: 4px;
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.pure {
+		.result {
+			color: #333;
+			background: #FFF;
+			border-color: #F6F6F6;
+			border-right-color: #FFF;
+			padding-left: 7px;
+			padding-right: 7px;
+			transition: none;
+		}
+		.arrow {
+			background: #FFF;
+			border-color: #F6F6F6;
+			padding-left: 0px;
+			padding-right: 7px;
+			i {
+				border-width: 4px;
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.blue {
+		.result {
+			color: #fff;
+			background: #44A7E0;
+			border-color: #44A7E0;
+			padding-left: 7px;
+			padding-right: 7px;
+			border-right-width: 0px;
+			transition: none;
+		}
+		.arrow {
+			background: #44A7E0;
+			border-color: #44A7E0;
+			padding-left: 0px;
+			padding-right: 7px;
+			i {
+				border-width: 4px;
+				visibility: hidden;
+			}
+		}
+	}
+	&.multi {
+		.result {
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+	}
+
+}
+
+// 新面板
+.M-dropPanel {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: #fff;
+	z-index: 1;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: auto;
+	cursor: default;
+
+	.arrowCon {
+		position: absolute;
+		top: -14px;
+		left: 0px;
+		.arrow {
+			display: block;
+			.icon();
+			.icon-triangle-top;
+		}
+	}
+
+	.searchCon {
+
+		.searchBox {
+			padding: 5px;
+			position: relative;
+			.input {
+				text-indent: 20px;
+				width: 100%;
+			}
+			i {
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+				left: 2px;
+				cursor: default;
+				margin-top: -15px;
+			}
+			.undo {
+				.icon();
+				.icon-searchBtnDel;
+				display: none;
+				cursor: pointer;
+			}
+			.do {
+				.icon();
+				.icon-searchBtnGo;
+			}
+		}
+	}
+
+	.listCon {
+		width: 100%;
+		// height: 100%;
+	}
+
+	.subListCon {
+		>div {
+			width: 100%;
+			position: absolute;
+			margin-left: 8px;
+			border: 1px solid #CCC;
+			border-radius: 3px;
+			background: white;
+			cursor: default;
+			min-width: 100px;
+			display: none;
+			box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+
+			.subArrow {
+				position: absolute;
+				left: -16px;
+				width: 0px;
+				height: 0px;
+				overflow: hidden;
+				border: 8px solid transparent;
+				border-right-color: #ccc;
+				top: 50%;
+				margin-top: -8px;
+			}
+		}
+	}
+
+	.toolbarCon {
+		width: 100%;
+	}
+
+	li {
+		width: 100%;
+		position: relative;
+		a {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			color: #333333;
+			padding: 0 0.875rem;
+			cursor: pointer;
+			&:hover {
+				text-decoration: none;
+				background: #eee;
+			}
+			&.groupTitle {
+				font-style: italic;
+				text-indent: 10px;
+			}
+		}
+
+		.multiIcon {
+			position: absolute;
+			right: 5px;
+			top: 50%;
+			margin-top: -6px;
+			display: none;
+		}
+		.subIcon {
+			position: absolute;
+			right: 5px;
+			top: 50%;
+			margin-top: -6px;
+		}
+
+		&.act {
+			font-weight: bold;
+			background-color: #f7f7f7;
+		}
+
+		&.act_multi {
+			.multiIcon {
+				display: inline-block;
+			}
+		}
+
+		&.highlight {
+			background: #f5f5f5;
+		}
+
+		&.spacing {
+			border-bottom: 1px solid #ccc;
+		}
+
+		&:nth-of-type(3) {
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+	}
+
+	.matchTips, .noDataTips {
+		display: none;
+		a {
+			font-style: italic;
+			cursor: default;
+			&:hover {
+				background: none;
+			}
+		}
+	}
+
+	&.deep {
+		background: #3D4B4E;
+		ul {
+			padding: 4px 0;
+		}
+		li {
+			a {
+				color: #F7F7F7;
+				&:hover {
+					background: #221814 !important;
+					color: #fff !important;
+				}
+			}
+		}
+		.act {
+			a {
+				background: #221814 !important;
+				color: #fff !important;
+			}
+		}
+	}
+
+
+
+	// 含有子项时的标记箭头
+	// &More{
+	// 	position: absolute;
+	// 	right: 10px;
+	// 	top: 50%;
+	// 	color: #A1A1A1;
+	// 	font-size: 24px;
+	// 	margin-top: -12px;
+	// }
+}
+
+
+.M-dropAdd {
+	position: relative;
+	display: inline-block;
+	vertical-align: bottom;
+	.icon {
+		cursor: pointer;
+		display: inline-block;
+		padding: 2px 5px;
+		i {
+			color: #FFF;
+		}
+	}
+	.title {
+		display: none;
+		font-size: 14px;
+		margin-left: 5px;
+	}
+	.panelCon {
+		width: 100%;
+		position: relative;
+	}
+	&:hover {
+		.title {
+			// display: inline-block;
+		}
+	}
+	.links {
+		display: inline-block;
+		margin-left: -10px;
+		a {
+			font-size: 13px;
+			margin-right: 10px;
+			vertical-align: middle;
+			padding: 6px 8px;
+			// background: #3b9ee1;
+			color: #FFFFFF;
+			border-radius: 4px;
+
+			i {
+				margin-right: 4px;
+				vertical-align: -1px;
+			}
+
+			&:hover {
+				background: #318dcb;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+			}
+		}
+	}
+}

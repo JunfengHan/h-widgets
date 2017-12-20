@@ -1,0 +1,158 @@
+/*------------------------------------*\
+
+    @State Classes
+
+\*------------------------------------*/
+
+
+// Add these classes to form elements that
+// are successful, warnings, dangers, info,
+// or primary colors
+
+
+// font-color
+
+input[type="text"].font-success,
+textarea.font-success,
+.font-success {
+	color: @success-color;
+}
+
+input[type="text"].font-primary,
+textarea.font-primary,
+.font-primary {
+	color: @primary-color;
+}
+
+input[type="text"].font-danger,
+textarea.font-danger,
+.font-danger {
+	color: @danger-color;
+}
+
+input[type="text"].font-warning,
+textarea.font-warning,
+.font-warning {
+	color: @warning-color;
+}
+
+input[type="text"].font-info,
+textarea.font-info,
+.font-info {
+	color: @info-color;
+}
+
+input[type="text"].font-white,
+textarea.font-white,
+.font-white {
+	color: @base-white;
+}
+
+.font-gray {
+	color: @base-color-64;
+}
+
+
+// border-color
+
+input[type="text"].f-is-success,
+textarea.f-is-success,
+.f-is-success {
+	border-color: @success-color;
+}
+
+input[type="text"].f-is-primary,
+textarea.f-is-primary,
+.f-is-primary {
+	border-color: @primary-color;
+}
+
+input[type="text"].f-is-danger,
+textarea.f-is-danger,
+.f-is-danger {
+	border-color: @danger-color;
+}
+
+input[type="text"].f-is-warning,
+textarea.f-is-warning,
+.f-is-warning {
+	border-color: @warning-color;
+}
+
+input[type="text"].f-is-info,
+textarea.f-is-info,
+.f-is-info {
+	border-color: @info-color;
+}
+
+
+
+
+
+// Add these classes to alert elements that
+// are successful, warnings, dangers, info,
+// or primary colors
+
+// alert-color
+
+.a-is-success {
+	color: darken(@success-color, 10%);
+	border-color: @success-color;
+	background-color: lighten(@success-color, 46.5%);
+}
+
+.a-is-danger {
+	color: darken(@danger-color, 10%);
+	border-color: @danger-color;
+	background-color: lighten(@danger-color, 40.5%);
+}
+
+.a-is-info {
+	color: darken(@info-color, 10%);
+	border-color: @info-color;
+	background-color: lighten(@info-color, 51.5%);
+}
+
+.a-is-warning {
+	color: darken(@warning-color, 10%);
+	border-color: @warning-color;
+	background-color: lighten(@warning-color, 44.5%);
+}
+
+.a-is-primary {
+	color: darken(@primary-color, 10%);
+	border-color: @primary-color;
+	background-color: lighten(@primary-color, 40%);
+}
+
+
+// background-color
+
+.b-is-success {
+	color: darken(@success-color, 10%);
+	background-color: @success-color;
+}
+
+.b-is-danger {
+	color: darken(@danger-color, 10%);
+	background-color: @danger-color;
+}
+
+.b-is-info {
+	color: darken(@info-color, 10%);
+	background-color: @info-color;
+}
+
+.b-is-warning {
+	color: darken(@warning-color, 10%);
+	background-color: @warning-color;
+}
+
+.b-is-primary {
+	color: darken(@primary-color, 10%);
+	background-color: @primary-color;
+}
+
+.b-is-gray {
+	background-color: @mod-bg;
+}

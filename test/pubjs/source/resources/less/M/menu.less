@@ -1,0 +1,191 @@
+.border-box{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.M-Menu{
+	position: absolute;
+	left: 0;
+	top: 0;
+	// background: #3D4B4E;
+	background: #fff;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: none;
+	min-height: 80;
+
+	// 容器
+	&Con {
+		height: 100%;
+		overflow: auto;
+	}
+	// 选项ul样式
+	&Options{
+		padding: 4px 0;
+		li {
+			position: relative;
+			overflow:hidden;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			a {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				color: #333333;
+				padding: 0 0.875rem;
+				&:hover {
+					text-decoration: none;
+					background: #eee;
+					color: #333333;
+				}
+			}
+		}
+
+		// 含有子项时的标记箭头
+		&More{
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			color: #A1A1A1;
+			font-size: 24px;
+			margin-top: -12px;
+		}
+	}
+	// 搜索框样式
+	&Search{
+		position: relative;
+		z-index: 10;
+		background: #FFF;
+		&Input{
+			float: none;
+			text-indent: 20px;
+		}
+		em{
+			display: block;
+			width: 30px;
+			position: absolute;
+			top: 50%;
+			left: 2px;
+			cursor: pointer;
+			margin-top: -15px;
+		}
+		&ClearWord{
+			.icon();
+			.icon-searchBtnDel;
+		}
+		&BtnClick{
+			.icon();
+			.icon-searchBtnGo;
+		}
+	}
+	// 确认按钮样式
+	&Confirm{
+		position: relative;
+		.border-box;
+		margin: 0 auto;
+		width: 100%;
+		min-width: 150px;
+		height: 38px;
+		line-height: 35px;
+		z-index: 10;
+		padding: 5px;
+		border-bottom: 1px solid #EEE;
+		background: #F5F5F5;
+		display: flex;
+		flex-flow: row;
+		input[type=button]{
+			border: none;
+			background: inherit;
+		}
+		input[type=button]:focus{
+			outline: none;
+		}
+		// 确定按钮
+		&Button{
+			.border-box;
+			display: inline-block;
+			width: 45%;
+			height: 100%;
+			background: #DFDFDF !important;
+			border-radius: 2px;
+		}
+		// 全选按钮
+		&All{
+			.border-box;
+			display: inline-block;
+			height: 100%;
+			flex: 1;
+			color:#0058B0;
+		}
+		// 反选按钮
+		&Shift{
+			.border-box;
+			display: inline-block;
+			height: 100%;
+			flex: 1;
+			color:#0058B0;
+		}
+	}
+	// 多选情况下的checkbox
+	&CheckBox{
+		display: inline-block;
+		margin-right: 10px;
+		width: 12px;
+		height: 12px;
+		background: #FFF;
+		border: 1px solid #DDD;
+		border-radius: 50%;
+		vertical-align: middle;
+	}
+	&Checked{
+		background: #999;
+	}
+
+	// 按钮样式
+	&Drop{
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+
+		.result {
+			font-size: 12px;
+		}
+		.arrow {
+			i {
+				display: inline-block;
+				vertical-align: sub;
+			}
+		}
+		.panelCon {
+			width: 100%;
+			position: relative;
+		}
+	}
+
+	&.M-MenuDeepColor {
+		border: none;
+		width: auto;
+		background: none;
+		margin-top: -4px;
+		background: #3D4B4E;
+		.M-MenuCon {
+			li {
+				a {
+					color: #F7F7F7;
+					&:hover {
+						background: #221814 !important;
+						color: #fff !important;
+					}
+				}
+			}
+			.act {
+				a {
+					background: #221814 !important;
+					color: #fff !important;
+				}
+			}
+		}
+	}
+}

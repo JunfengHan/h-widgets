@@ -1,0 +1,3740 @@
+/***
+ * Background Image CSS auto generate by PHP Image Packager
+ * http://blog.win-ing.cn by Katana
+ ***/
+/* Image: ../images/icons.png?0622 */
+/* Image: ../images/icons_act.png?0622 */
+.M-commonScroller {
+  position: absolute;
+  overflow: hidden;
+  opacity: 0.3;
+}
+.M-commonScroller:hover,
+.M-commonScroller.act {
+  opacity: 1;
+  background: #EEE;
+  background: rgba(250, 250, 250, 0.2);
+  box-shadow: rgba(128, 128, 128, 0.2) 1px 0 4px inset;
+}
+.M-commonScroller:hover > div,
+.M-commonScroller.act > div {
+  opacity: 0.3;
+}
+.M-commonScroller div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px inset;
+  background: #C3C3C3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.M-commonScroller div:hover {
+  opacity: 0.3;
+  background: #999;
+}
+.M-commonScroller.act div {
+  opacity: 0.3;
+  background: #999;
+  padding: 4px !important;
+}
+.M-commonDropdown {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.M-commonDropdown .arrow i {
+  display: inline-block;
+  vertical-align: sub;
+}
+.M-commonDropdown .result {
+  font-size: 12px;
+}
+.M-commonDropdownList {
+  left: 0px;
+  z-index: 1;
+  cursor: default;
+  background: white;
+  position: absolute;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.M-commonDropdownList .search {
+  padding: 5px;
+  position: relative;
+}
+.M-commonDropdownList .search input {
+  text-indent: 20px;
+  width: 100% !important;
+}
+.M-commonDropdownList .btnSearch,
+.M-commonDropdownList .btnCancel {
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  cursor: pointer;
+  margin-top: -15px;
+}
+.M-commonDropdownList .btnSearch {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px 0;
+  width: 30px;
+  height: 30px;
+}
+.M-commonDropdownList .btnCancel {
+  display: none;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px -30px;
+  width: 30px;
+  height: 30px;
+}
+.M-commonDropdownList .dragIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px -80px;
+  width: 10px;
+  height: 10px;
+  cursor: se-resize;
+}
+.M-commonDropdownList .options {
+  min-width: 100px;
+}
+.M-commonDropdownList .option {
+  color: #333;
+  padding: 6px 5px 6px 5px;
+  display: block;
+  background: #fff;
+  text-decoration: none;
+}
+.M-commonDropdownList .option:hover {
+  background: #f0f0f0;
+}
+.M-commonDropdownList .option.act {
+  font-weight: 700;
+  color: #333;
+  cursor: default;
+  font-weight: bold;
+  background-color: #f7f7f7;
+}
+.M-commonDropdownList .option.has-sub i {
+  float: right;
+  font-size: 18px;
+  color: #aaa;
+}
+.M-commonDropdownList .option.has-sub:hover {
+  background: #f0f0f0;
+}
+.M-commonDropdownList .option.highlight {
+  background: #f5f5f5;
+}
+.M-commonDropdownList .sub-list .subs {
+  position: absolute;
+  margin-left: 8px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  background: white;
+  cursor: default;
+  min-width: 100px;
+  display: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+.M-commonDropdownList .sub-list .sub_arrow {
+  position: absolute;
+  left: -16px;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  border: 8px solid transparent;
+  border-right-color: #ccc;
+  top: 50%;
+  margin-top: -8px;
+}
+.M-commonFloatDropdown {
+  border: none;
+  background: none;
+  position: absolute;
+  border-radius: none;
+}
+.M-commonFloatDropdown .list {
+  top: 0!important;
+  opacity: 0.99;
+  border-radius: 4px;
+  border: 2px solid #555;
+}
+.M-commonFloatDropdown .list .option {
+  color: #fff;
+  padding: 10px;
+  background: #555;
+  white-space: nowrap;
+  border-top: none;
+}
+.M-commonFloatDropdown .list .option:hover {
+  background: #444;
+  box-shadow: none;
+}
+.M-commonFloatDropdown .list .option.act {
+  color: #333;
+  cursor: default;
+  font-weight: 700;
+}
+.M-commonFloatDropdown .list .option.has-sub {
+  background: #555;
+}
+.M-commonFloatDropdown .list .option.has-sub:hover {
+  background: #444;
+}
+.M-commonFloatDropdown .list .sub-list .subs {
+  background: #555;
+  border-radius: 4px;
+  border: 2px solid #555;
+}
+.M-commonFloatDropdown .list .sub-list .sub_arrow {
+  border-right-color: #555;
+}
+.M-commonFloatDropdown .list .sub-list .sub_right_arrow {
+  border-right-color: rgba(0, 0, 0, 0);
+  border-left-color: #555;
+}
+.M-commonFloatDropdown .list .nonData {
+  cursor: default;
+  text-align: center;
+  color: #999;
+  background: #555;
+}
+.M-commonFloatDropdown .list .nonData:hover {
+  background: #555;
+}
+.M-commonInput {
+  position: relative;
+}
+.M-commonInputPlaceholder {
+  color: #999;
+}
+.M-commonInputPrefix {
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  margin-top: -7px;
+}
+.M-commonInputSuffix {
+  padding: 0 5px;
+}
+.M-commonItem {
+  position: relative;
+}
+.M-commonItemCon {
+  display: inline-block;
+  padding-left: 2px;
+  vertical-align: middle;
+}
+.M-commonItemCon input {
+  vertical-align: middle;
+}
+.M-commonItemCon.custom label {
+  color: #646464;
+}
+.M-commonItemCon.custom input {
+  display: none;
+}
+.M-commonItemCon.change label {
+  color: #58aedd !important;
+}
+.M-commonItemCon.change label .custom-checkbox {
+  border-color: #58aedd;
+}
+.M-commonItemCon.change label .custom-checkbox i {
+  display: block;
+}
+.M-commonItemTools {
+  position: relative;
+  margin-bottom: 10px;
+}
+.M-commonItemTools .M-commonSearch {
+  display: inline-block;
+  margin-right: 20px;
+}
+.M-commonItemTools > input {
+  vertical-align: middle;
+}
+.M-commonItemRadio {
+  vertical-align: middle;
+  padding: 0 20px 0 5px;
+  cursor: pointer;
+}
+.M-commonItemRadio input {
+  display: none;
+}
+.M-commonItemRadio .custom-checkbox {
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  vertical-align: -2px;
+  margin-right: 5px;
+}
+.M-commonItemRadio .custom-checkbox i {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  display: none;
+  color: #58aedd;
+}
+.M-commonItemRadioDisabled {
+  color: #BFBFBF;
+}
+.M-commonItemRadioIsolation {
+  margin: 5px 0;
+}
+.M-commonItemTips {
+  display: inline-block;
+  vertical-align: top;
+}
+.M-commonFlexibleInputWrap {
+  position: relative;
+  display: inline-block;
+}
+.M-commonFlexibleInputDiv {
+  margin-bottom: 5px;
+  position: relative;
+}
+.M-commonFlexibleInputDiv input {
+  padding-right: 20px;
+}
+.M-commonFlexibleInputAdd {
+  position: absolute;
+  bottom: 10px;
+  right: -30px;
+  display: inline-block;
+  background-color: #d5d5d5;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 20px;
+  width: 20px;
+}
+.M-commonFlexibleInputAdd:hover {
+  background-color: #888;
+}
+.M-commonFlexibleInputAdd i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -7px;
+  margin-top: -7px;
+}
+.M-commonFlexibleInputDel {
+  position: absolute;
+  display: none;
+  right: 6px;
+  top: 9px;
+  color: #919191;
+  cursor: pointer;
+}
+.M-commonFlexibleInputDel:hover {
+  color: #111;
+}
+.M-commonPager .layout-row {
+  margin: 0;
+}
+.M-commonPager .layout-row .layout-col {
+  padding: 0;
+  display: inline-block;
+  width: auto;
+  float: none;
+}
+.M-commonPager input,
+.M-commonPager button {
+  height: 28px;
+  margin: 0 1px;
+}
+.M-commonPagerBox {
+  margin: 0px 10px;
+}
+.M-commonPagerBox span {
+  margin-right: 10px;
+}
+.M-commonPagerBox select {
+  height: 28px;
+  width: 60px;
+  cursor: pointer;
+  border-radius: 4px;
+  border-color: #cccccc;
+}
+.M-commonPagerBox select:focus {
+  outline: 0;
+}
+.M-commonPagerInfo {
+  margin-right: 10px;
+}
+.M-commonPagerGotoBox {
+  margin-left: 5px;
+}
+.M-commonPagerGoto {
+  width: 40px;
+}
+.M-commonPagerActive,
+.M-commonPagerActive:hover,
+.M-commonPagerActive:focus {
+  background: #535B5E !important;
+  color: #fff;
+  cursor: default;
+}
+.M-commonSearch {
+  position: relative;
+}
+.M-commonSearchInputCon {
+  position: relative;
+}
+.M-commonSearch .arrow {
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+}
+.M-commonSearchDo {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px 0;
+  width: 30px;
+  height: 30px;
+}
+.M-commonSearchUndo {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  display: none;
+  top: 50%;
+  margin-top: -5px;
+}
+.M-commonSearchWords {
+  position: absolute;
+  left: 0px;
+  top: 8px;
+  width: 30px;
+  height: 16px;
+  border-right: 1px solid #ececec;
+  cursor: pointer;
+}
+.M-commonSearchWords i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -3px;
+}
+.M-commonSearchWords i:hover {
+  border-top-color: #000;
+}
+.M-commonSearch.hasWords input {
+  padding-left: 35px;
+}
+.M-commonSearch.simple .form-element-group {
+  display: block;
+}
+.M-commonSearch.simple .M-commonSearchInput {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-right: 30px;
+}
+.M-commonSearch.simple .M-commonSearchUndo {
+  right: 30px;
+  background: #fff;
+  margin-top: -6px;
+}
+.M-commonSearch.simple .arrow {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.M-commonSearch.simple .iconCon {
+  right: 10px;
+}
+.M-commonWordsSearch {
+  padding: 20px;
+  position: relative;
+}
+.M-commonWordsSearch .title {
+  font-size: 14px;
+  float: left;
+}
+.M-commonWordsSearch .desc {
+  font-size: 12px;
+  color: #ccc;
+  float: left;
+  margin: 2px 0 10px 10px;
+}
+.M-commonWordsSearch textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 100px;
+}
+.M-commonWordsSearch button {
+  margin: 0 auto;
+  display: inherit;
+  width: 80px;
+}
+.M-commonWordsSearch i {
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  font-size: 14px;
+}
+.M-commonWordsSearch i:hover {
+  background-color: #f2f2f2;
+}
+.M-commonSearchOldInput {
+  width: 300px;
+  min-height: 30px;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+.M-commonSearchOldUndo {
+  display: none;
+}
+.M-commonSearchOld .uk-button {
+  margin-left: 10px;
+}
+.M-commonSearchOldDo {
+  background: 'uk-icon-search';
+}
+.M-commonLoading {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  background: #cccccc;
+  font-size: 4rem;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+}
+.M-commonLoading i {
+  font-size: 4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2rem;
+  margin-top: -2rem;
+}
+.M-commonLoading.noMask {
+  background: none;
+  opacity: 1;
+}
+.M-commonLoading.noMask i {
+  color: #FFFFFF;
+}
+.M-commonLoading.small {
+  background: #ececec;
+  font-size: 3rem;
+}
+.M-commonLoading.small i {
+  font-size: 3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -1.5rem;
+  margin-top: -1.5rem;
+}
+.M-commonCheckbox,
+.M-commonRadio {
+  padding-top: 5px;
+}
+.M-commonCheckbox label input,
+.M-commonRadio label input {
+  vertical-align: middle;
+  margin: 0 5px 0 10px;
+}
+.M-commonCheckbox label span,
+.M-commonRadio label span {
+  vertical-align: middle;
+}
+.M-commonRadioGroup label {
+  margin-right: 15px;
+}
+.M-commonExcel button {
+  vertical-align: middle;
+}
+.M-dialog {
+  position: absolute;
+  top: 120px;
+  left: 1%;
+  min-width: 350px;
+  _width: 350px;
+  background: #fff;
+  display: none;
+  border-radius: 5px;
+}
+.M-dialogHead {
+  position: relative;
+  padding: 20px 25px 10px 25px;
+  height: auto;
+}
+.M-dialogTitle {
+  color: #2a4456;
+  font-size: 16px;
+  font-weight: bold;
+}
+.M-dialogClose {
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  font-size: 22px;
+}
+.M-dialogClose:hover {
+  background-color: #f2f2f2;
+}
+.M-dialogBody {
+  color: #444;
+  padding: 0 25px 0 25px;
+  font-size: 13px;
+}
+.M-dialogFoot {
+  padding: 10px 25px 20px 25px;
+  text-align: right;
+  height: auto;
+}
+.M-dialogFoot input {
+  margin: 0 0 0 10px;
+}
+.M-dialogMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 999;
+  opacity: 0.3;
+}
+.M-dialogAlert {
+  position: fixed;
+  top: 50%;
+  font-size: 14px;
+  min-width: 350px;
+  _width: 350px;
+}
+.M-dialogAlert .M-dialogBody {
+  line-height: 16px;
+}
+.M-dialogCodecopyNote {
+  margin-bottom: 0;
+}
+.M-dialogCodecopyCode {
+  margin-top: 10px;
+  width: 100%;
+  height: 18em !important;
+}
+.M-dialogCodecopyCopy {
+  margin: 10px auto 0;
+  min-width: 150px;
+  display: block;
+}
+.M-dialogNotify {
+  position: absolute;
+  left: -500px;
+  top: -500px;
+  padding: 0 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #fff;
+}
+.M-dialogNotifyTitle {
+  font-size: 16px;
+  line-height: 30px;
+}
+.M-dialogNotifyIcon {
+  display: none;
+}
+.M-dialogNotifyMessage {
+  font-size: 14px;
+  letter-spacing: 2px;
+  max-width: 400px;
+  height: 30px;
+  line-height: 30px;
+}
+.M-dialogLoading {
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  position: absolute;
+  display: inline-block;
+  background: url(../images/loading.gif) no-repeat;
+}
+.M-tip {
+  position: absolute;
+  min-width: 100px;
+  background: #555;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 0.6em;
+  z-index: 10000;
+  opacity: 0;
+  transition: 'opacity';
+}
+.M-tipContent {
+  margin: 5px;
+  padding: 10px;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.M-tipArrow {
+  position: absolute;
+}
+.M-tipArrowtL,
+.M-tipArrowtm,
+.M-tipArrowtR {
+  border-top-color: #555;
+}
+.M-tipArrowbL,
+.M-tipArrowbm,
+.M-tipArrowbR {
+  border-bottom-color: #555;
+}
+.M-tipArrowmr {
+  border-right-color: #555;
+}
+.M-tipArrowml {
+  border-left-color: #555;
+}
+.M-tipBody {
+  min-height: 50px;
+  padding: 10px;
+  line-height: 1.8em;
+}
+.M-tipBody b {
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  vertical-align: baseline;
+}
+.M-tipFoot {
+  display: none;
+}
+.M-tipHead {
+  display: none;
+}
+.M-tipAct {
+  opacity: 1;
+}
+.M-tooltip {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  min-height: 50px;
+  background: #fff;
+  border-radius: 0px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  opacity: 0;
+  transition: 'opacity';
+}
+.M-tooltip .M-tipContent {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-radius: 0;
+  overflow: inherit;
+}
+.M-tooltip .M-tipArrow {
+  position: absolute;
+}
+.M-tooltip .M-tipArrowtL,
+.M-tooltip .M-tipArrowtm,
+.M-tooltip .M-tipArrowtR {
+  border-top-color: #A1A1A1;
+}
+.M-tooltip .M-tipArrowbL,
+.M-tooltip .M-tipArrowbm,
+.M-tooltip .M-tipArrowbR {
+  border-bottom-color: #A1A1A1;
+}
+.M-tooltip .M-tipArrowmr {
+  border-right-color: #A1A1A1;
+}
+.M-tooltip .M-tipArrowml {
+  border-left-color: #A1A1A1;
+}
+.M-tooltip .M-tipArrow.left {
+  right: auto !important;
+}
+.M-tooltip .M-tipArrow.right {
+  left: auto !important;
+}
+.M-tooltip .M-tipArrow.custom {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -154px -109px;
+  width: 20px;
+  height: 15px;
+}
+.M-tipDesc {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -98px 0;
+  width: 16px;
+  height: 16px;
+}
+.draghand {
+  cursor: url(../images/hand.cur), pointer;
+}
+.M-tableCustomColumn {
+  border-radius: 0;
+  background: #fff;
+}
+.M-tableCustomColumn label input {
+  margin-right: 5px;
+}
+.M-tableCustomColumn td {
+  line-height: 16px;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 0 15px 10px;
+}
+.M-tableCustomColumn td strong {
+  display: block;
+  font-weight: 400;
+  color: #0E0E0E;
+  padding: 0 0 8px 0;
+}
+.M-tableCustomColumn td label {
+  color: #646464;
+  display: block;
+  margin: 0 0 0 14px;
+  padding: 3px 0;
+}
+.M-tableCustomColumnFooter {
+  clear: both;
+  border-top: 1px #AAA solid;
+  margin: 0 -5px -5px;
+  padding: 10px 5px 0;
+}
+.M-tableCustomColumnFooter .checkboxCon {
+  margin-right: 120px;
+}
+.M-tableCustomColumnFooter button + button {
+  margin-left: 10px;
+}
+.M-tableTab {
+  float: left;
+  height: 29px;
+  background: #F6F6F6;
+  border: 1px solid #CACDCC;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+}
+.M-tableTabItem {
+  list-style: none;
+  float: left;
+  display: inline;
+  padding: 0 15px;
+  height: 29px;
+  line-height: 29px;
+  color: #0D0D0D;
+  cursor: pointer;
+}
+.M-tableTabItem i {
+  padding: 0 7px;
+  margin-right: -10px;
+  cursor: pointer;
+}
+.M-tableTabCustom {
+  padding-right: 10px;
+  position: relative;
+}
+.M-tableTabCustom > span {
+  padding: 0 8px;
+  cursor: pointer;
+}
+.M-tableTabActive {
+  background: #848484;
+  border: 1px solid #848484;
+  height: 30px;
+  border-bottom: none;
+  margin: -1px -1px -3px;
+  cursor: default;
+  color: white;
+}
+.M-tableTabActive > span {
+  background-image: url("../images/icons_act.png?0622");
+  background-repeat: no-repeat;
+}
+.M-tableAmount {
+  clear: both;
+  border-left: 1px solid #C9CCCB;
+  border-right: 1px solid #C9CCCB;
+  border-top: 3px solid #848484;
+  overflow: hidden;
+  color: #545454;
+  background: white;
+  background: -webkit-gradient(linear, 0 41%, 100% 0, from(#ffffff), to(#f7f7f7));
+  background: -webkit-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -moz-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -ms-linear-gradient(top, #ffffff, #f7f7f7);
+  background: -o-linear-gradient(top, #ffffff, #f7f7f7);
+  background: linear-gradient(top, #ffffff, #f7f7f7);
+  filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#f7f7f7', GradientType=0)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#f7f7f7', GradientType=0)";
+}
+.M-tableAmount ul {
+  padding: 0;
+  margin: 0;
+}
+.M-tableAmount li {
+  position: relative;
+  float: left;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  /*font-weight: bold;*/
+  padding: 10px;
+  height: 40px;
+  border-left: 1px solid #C9CCCB;
+}
+.M-tableAmount li.first {
+  border-left: none;
+}
+.M-tableAmount li span {
+  /*font-weight: normal;*/
+  font-size: 12px;
+  display: block;
+  color: #A3A3A3;
+  margin: 0 0 4px;
+  text-align: center;
+}
+.M-tableAmount li em {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px -90px;
+  width: 15px;
+  height: 15px;
+}
+.M-tableAmount li em:hover {
+  background-image: url("../images/icons_act.png?0622");
+  background-repeat: no-repeat;
+}
+.M-tableAmount li p {
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  background: #2faeeb;
+  transition: 'height';
+}
+.M-tableAmount .allowClick li {
+  cursor: pointer;
+}
+.M-tableAmount .itemAct {
+  cursor: default;
+}
+.M-tableAmount .itemAct p {
+  height: 3px;
+  opacity: 1;
+}
+.M-tableSubGridCtr {
+  top: -6px;
+  z-index: 10;
+  left: -10px;
+  height: 26px;
+  padding: 2px 6px 0 6px;
+  background: #fff;
+  position: absolute;
+  border-radius: 12px;
+}
+.M-tableSubGridCtr a {
+  display: inline-block;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+}
+.M-tableSubGridCtr a.act,
+.M-tableSubGridCtr a:hover {
+  background-image: url("../images/icons_act.png?0622");
+  background-repeat: no-repeat;
+}
+.M-tableList {
+  overflow: hidden;
+  border: 1px solid #C8CDCC;
+  background: #fff;
+  clear: both;
+  font-size: 13px;
+}
+.M-tableList.disabled {
+  opacity: 0.5;
+}
+.M-tableList table {
+  border-spacing: 0;
+  border: none;
+  min-width: 100%;
+}
+.M-tableList thead tr {
+  background: #f8f8f8;
+}
+.M-tableList thead th {
+  cursor: default;
+  padding: 8px 0;
+  border: none;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
+  white-space: nowrap;
+  border-bottom: 1px solid #C8CDCC;
+  text-align: center;
+}
+.M-tableList thead th span {
+  padding: 0 4px;
+}
+.M-tableListHeadHover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.M-tableListHeadDown {
+  background: #f1f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+.M-tableListHeadSort {
+  cursor: pointer !important;
+}
+.M-tableListHeadSort em {
+  background: url(../images/updown.png) left 50px no-repeat;
+}
+.M-tableListHeadSort.asc em {
+  padding: 0 5px;
+  background-position: left 7px;
+}
+.M-tableListHeadSort.desc em {
+  padding: 0 5px;
+  background-position: left -29px;
+}
+.M-tableList tbody tr.alt {
+  background: #F8F8F8;
+}
+.M-tableList tbody > tr:hover {
+  background: #EFFBFE;
+}
+.M-tableList tbody td {
+  border: none;
+  text-align: right;
+  white-space: nowrap;
+  border: solid #EBEBEB;
+  border-width: 0 1px 1px 0;
+  line-height: 23px;
+  padding: 8px;
+}
+.M-tableList tbody td img {
+  max-width: initial;
+}
+.M-tableList tbody tr:last-of-type td {
+  border-bottom: none;
+}
+.M-tableList tbody .center {
+  text-align: center;
+}
+.M-tableList tbody .left {
+  text-align: left;
+}
+.M-tableListSub {
+  padding: 0 22px 0 0;
+  position: relative;
+}
+.M-tableListSubRow2 .M-tableListContent {
+  min-height: 32px;
+  line-height: 32px;
+}
+.M-tableListSubRow2 .M-tableListFunctional {
+  margin-top: -24px;
+}
+.M-tableListSubRow2 .M-tableListSubCtr {
+  margin-top: 0px;
+}
+.M-tableListFunctional,
+.M-tableListOtherFunc {
+  top: -13px;
+  left: -6px;
+  width: 20px;
+  overflow: hidden;
+  position: absolute;
+  padding: 3px 2px 1px 7px;
+  transition: 'width' 0.2s;
+}
+.M-tableListFunctional a,
+.M-tableListOtherFunc a {
+  display: inline-block;
+}
+.M-tableListFunctionalAnchor,
+.M-tableListOtherFuncAnchor {
+  position: relative;
+}
+.M-tableListFunctional .spacing,
+.M-tableListOtherFunc .spacing {
+  width: 10px;
+  display: inline-block;
+}
+.M-tableListMenu {
+  padding: 4px;
+}
+.M-tableListMenu em {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -58px -122px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: -5px;
+}
+.M-tableListMenu:hover {
+  background: #ebebeb;
+}
+.M-tableList .functionalHover .M-tableListFunctional,
+.M-tableList .functionalHover .M-tableListOtherFunc {
+  z-index: 12;
+  background: #fff;
+  border-radius: 12px;
+}
+.M-tableListSubCtr {
+  position: absolute;
+  margin-top: -10px;
+  height: 20px;
+  right: -3px;
+  top: 50%;
+}
+.M-tableListSubCtr > div {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  right: 4px;
+  top: 2px;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+}
+.M-tableListSubCtr > div.act {
+  background-image: url("../images/icons_act.png?0622");
+  background-repeat: no-repeat;
+}
+.M-tableListSubOperate .M-tableListFunctional {
+  right: -4px;
+  padding: 2px 0px;
+  background-color: transparent;
+}
+.M-tableListSubGrid > td {
+  position: relative;
+  background: url(../images/grid_bg.gif) repeat-x #f3f3f3;
+  padding: 21px 0px 0 !important;
+  border-width: 0 !important;
+}
+.M-tableListSubGrid div.con {
+  padding: 0 10px;
+  position: relative;
+  text-align: left;
+}
+.M-tableListSubGrid div.con em.arrow {
+  display: block;
+  position: absolute;
+  top: -22px;
+  left: 50px;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -98px -16px;
+  width: 16px;
+  height: 10px;
+}
+.M-tableListSubGrid div.con em.collapse {
+  display: none;
+  position: absolute;
+  top: -5px;
+  right: 50px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.M-tableListSubGrid div.con.show_collapse {
+  padding-top: 20px;
+}
+.M-tableListSubGrid div.con.show_collapse .collapse {
+  display: block;
+}
+.M-tableListSubGrid div.bg {
+  background: url(../images/grid_bg_bottom.gif) 0 100% repeat-x #f3f3f3;
+  height: 10px;
+}
+.M-tableListSubGrid .M-tabBody {
+  padding: 0 10px;
+  margin: 0 -10px;
+}
+.M-tableListClickable {
+  cursor: pointer;
+}
+.M-tableListClickable td[data-ctype] {
+  cursor: default;
+}
+.M-tableListEmpty td {
+  background: #fff;
+  text-align: center!important;
+  padding: 30px 0 !important;
+}
+.M-tableListLoading {
+  position: absolute;
+  z-index: 100;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  background: #eee;
+  opacity: 0.4;
+}
+.M-tableListLoading i {
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.M-tableListWidthLimit {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+.M-tableListRowHighlight {
+  color: #00AC3E;
+  font-weight: bold;
+}
+.M-tableListHighlightRow {
+  font-weight: bold;
+  background: #EDFBFF!important;
+}
+.M-tableList .M-formValueEditor {
+  margin: -5px;
+}
+.M-tableList .M-formValueEditor .label {
+  padding: 0 5px;
+}
+.M-tableList .M-formValueEditor .inputLock {
+  left: 0;
+}
+.M-tableList .M-formValueEditor .countInput {
+  width: 25px;
+  padding: 0 3px;
+}
+.M-tableListMark {
+  border-left: solid #2faeeb 3px!important;
+}
+.M-tableListMarkAct {
+  background-color: #2faeeb;
+}
+.M-tableListCellFn {
+  cursor: pointer!important;
+  background: transparent none center no-repeat;
+}
+.M-tableListCellFnAct {
+  background: #2faeeb url("../images/td_trend.png") center no-repeat;
+}
+.M-tableListCellFnAct span {
+  opacity: 0;
+}
+.M-tableList .running {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -62px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.M-tableList .pause {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -82px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.M-tableList .store {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -102px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.M-tableBatch {
+  float: right;
+  margin: 0 5px;
+  position: relative;
+}
+.M-gridRefreshAuto {
+  color: #444;
+  padding: 0 5px;
+  cursor: pointer;
+  line-height: 30px;
+  margin-right: 5px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.M-gridRefreshAuto i {
+  margin-right: 4px;
+}
+.M-gridRefreshAuto:hover {
+  background-color: #f5f5f5;
+}
+.M-gridRefresh button {
+  padding: 0 7px;
+  min-height: 25px;
+  line-height: 25px;
+  border-radius: 4px;
+  width: 30px;
+  background-color: #eee;
+}
+.M-gridRefresh button:focus {
+  outline: 0;
+}
+.M-gridRefresh button:hover {
+  background-color: #f5f5f5;
+}
+.M-gridRefresh .refNormal {
+  height: 30px;
+  padding: 0 9px;
+  vertical-align: top;
+}
+.M-gridRefresh .refNormal em {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -145px;
+  width: 12px;
+  height: 12px;
+}
+.M-gridExportCustom {
+  border-radius: 0;
+  background: #fff;
+}
+.M-gridExportCustom .M-tipContent {
+  overflow: visible;
+}
+.M-gridExportCustom .title {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+.M-gridExportCustom .title span {
+  font-weight: normal;
+  font-size: 12px;
+  color: #83BFDF;
+  padding-left: 20px;
+}
+.M-gridExportCustom .list {
+  margin: 5px 0 20px 25px;
+}
+.M-gridExportCustom .bottom {
+  text-align: center;
+}
+.M-gridExportCustom ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.M-gridExportCustom ul.row_two li {
+  width: 50%;
+}
+.M-gridExportCustom ul.row_four li {
+  padding-right: 12px;
+}
+.M-gridExportCustom ul li {
+  display: block;
+  float: left;
+  line-height: 25px;
+}
+.M-gridExportCustom ul li:hover {
+  background: #efefef;
+}
+.M-gridExportCustom ul li.disabled {
+  background: none;
+  color: #ccc;
+}
+.M-gridExportCustom ul li label {
+  display: block;
+}
+.M-gridExportCustom ul li input {
+  float: left;
+  margin: 5px 8px 0;
+}
+.M-gridExportCustom ul li input.size_input {
+  float: none;
+  width: 50px;
+  margin: auto 4px;
+  padding: 0 4px;
+}
+.M-gridExportCustom ul li.custom {
+  position: relative;
+  width: 100%;
+}
+.M-gridExportCustom ul li.custom i {
+  padding: 0 6px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.M-gridExportCustom ul li.custom span {
+  display: block;
+  background: #ffffff url('../images/tick.png') no-repeat 30px center;
+  padding-left: 50px;
+  white-space: nowrap;
+}
+.M-gridExportCustom ul li.custom .options {
+  width: 100%;
+  position: absolute;
+  top: 25px;
+  left: -1px;
+  background: #fff;
+  border: 1px solid #ccc;
+  max-height: 200px;
+}
+.M-gridExportCustom ul li.custom .options li {
+  width: 100%;
+  text-indent: 1em;
+  cursor: pointer;
+}
+.M-gridFilterSidebarBtn {
+  font-size: 13px;
+}
+.M-gridFilterSidebarCon {
+  display: none;
+}
+.M-gridBase {
+  position: relative;
+}
+.M-gridBase .M-commonExcel button {
+  background-color: #eee;
+  height: 30px;
+  border-color: #eee;
+}
+.page_visitRoute {
+  cursor: pointer;
+  display: inline-block;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -32px -64px;
+  width: 16px;
+  height: 16px;
+}
+.page_heatmap {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: -16px;
+  margin-left: 10px;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -32px -122px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-utm_pages {
+  background-position: -98px -42px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-gutm_pages {
+  background-position: -98px -42px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-cutm_pages {
+  background-position: -98px -42px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-day_compare {
+  background-position: -16px -122px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-page {
+  background-position: -98px -42px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-page_landing {
+  background-position: -98px -58px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-loyalty {
+  background-position: -98px -74px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-keyWord {
+  background-position: -98px -90px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-se {
+  background-position: 0 -106px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-referer {
+  background-position: -16px -106px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-referer_url {
+  background-position: -32px -106px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-page_url {
+  background-position: -48px -106px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-city {
+  background-position: -64px -106px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-customs {
+  background-position: -80px -106px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-utm_spot {
+  background-position: -96px -106px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-geo {
+  background-position: -112px -106px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-client {
+  background-position: 0 -122px;
+  width: 16px;
+  height: 16px;
+}
+.M-subGrid-progress {
+  z-index: 0;
+}
+.M-subGrid-progressOuterBox {
+  cursor: pointer;
+}
+.M-subGrid-digg .opLink {
+  margin: 0 4px;
+}
+.M-chartTip {
+  display: none;
+  height: 120px;
+  text-align: center;
+}
+.M-chartEmpty {
+  font-size: 16px;
+  line-height: 120px;
+}
+.M-dateBar * + .uk-button-group,
+.M-dateBar .M-dateRange {
+  margin-left: 10px;
+}
+.M-datePicker {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 6px;
+  cursor: default;
+}
+.M-datePicker .M-tipContent {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+}
+.M-datePickerBody {
+  margin-left: -2px;
+}
+.M-datePicker .date-week,
+.M-datePicker .date-head {
+  margin-left: -1px;
+}
+.M-datePicker .date-ctrl {
+  top: 7px;
+  cursor: pointer;
+  position: absolute;
+  padding: 6px;
+}
+.M-datePicker .date-ctrl.prev {
+  left: 3px;
+}
+.M-datePicker .date-ctrl.next {
+  right: 3px;
+}
+.M-datePicker .date-container {
+  float: left;
+  width: 217px;
+  padding-left: 2px;
+}
+.M-datePicker .date-container a,
+.M-datePicker .date-container b,
+.M-datePicker .date-container em {
+  display: inline;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  color: #666;
+}
+.M-datePicker .date-container em.w0 {
+  display: none;
+}
+.M-datePicker .date-container em.w1 {
+  width: 30px;
+}
+.M-datePicker .date-container em.w2 {
+  width: 61px;
+}
+.M-datePicker .date-container em.w3 {
+  width: 92px;
+}
+.M-datePicker .date-container em.w4 {
+  width: 123px;
+}
+.M-datePicker .date-container em.w5 {
+  width: 154px;
+}
+.M-datePicker .date-container em.w6 {
+  width: 185px;
+}
+.M-datePicker .date-head {
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #f2f2f2;
+}
+.M-datePicker .date-head .date-year,
+.M-datePicker .date-head .date-month {
+  font-size: 14px;
+  line-height: 25px;
+  vertical-align: middle;
+}
+.M-datePicker .date-week {
+  height: 30px;
+}
+.M-datePicker .date-week b {
+  width: 31px;
+  color: #000;
+  font-weight: 700;
+}
+.M-datePicker .date-cal {
+  height: 150px;
+}
+.M-datePicker .date-cal a,
+.M-datePicker .date-cal em {
+  text-decoration: none;
+  font-weight: bold;
+  margin: -1px 0 0 -1px;
+  border: 1px solid #eee;
+  -moz-transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.M-datePicker .date-cal a {
+  cursor: pointer;
+}
+.M-datePicker .date-cal a.cur {
+  font-weight: 700;
+}
+.M-datePicker .date-cal a.disabled {
+  color: #ccc;
+  cursor: default;
+}
+.M-datePicker .date-cal a.sel {
+  position: relative;
+  background: #f2f2f2;
+  border: 1px solid #4d4d4d;
+}
+.M-datePicker .date-cal a.hov {
+  color: #fff;
+  background: #4e4e4e;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+.M-datePicker .date-cal .hide {
+  display: none;
+}
+.M-datePicker .date-cal .show {
+  display: inline;
+}
+.M-dateRange,
+.M-dateSingle {
+  min-height: 30px;
+  width: 180px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.M-dateSingle {
+  width: 100px;
+}
+.M-datePickerNew {
+  border-radius: 0px;
+  background: none;
+  box-shadow: none;
+  cursor: default;
+}
+.M-datePickerNew .M-tipContent {
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+  background: #fdfdfd;
+}
+.M-datePickerNewButtons {
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  padding: 0 15px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.M-datePickerNewButtons a {
+  padding: 2px 6px;
+  color: #3d3a39;
+}
+.M-datePickerNewButtons a:hover {
+  background: #dcdddc;
+  text-decoration: none;
+}
+.M-datePickerNewBody {
+  margin-left: -2px;
+  font-size: 12px;
+  color: #444;
+  position: relative;
+}
+.M-datePickerNew .date-ctrl {
+  top: 0px;
+  cursor: pointer;
+  position: absolute;
+  padding: 6px;
+}
+.M-datePickerNew .date-ctrl i {
+  color: #3d3a39;
+  font-size: 20px;
+}
+.M-datePickerNew .date-ctrl.prev {
+  left: 9px;
+}
+.M-datePickerNew .date-ctrl.next {
+  right: 9px;
+}
+.M-datePickerNew .date-container {
+  float: left;
+  width: 230px;
+  padding: 0 10px;
+  margin: 0 0px 5px;
+}
+.M-datePickerNew .date-container a,
+.M-datePickerNew .date-container b,
+.M-datePickerNew .date-container em {
+  display: inline;
+  float: left;
+  text-align: center;
+  line-height: 26px;
+  height: 26px;
+  width: 30px;
+  color: #444;
+  font-weight: normal;
+}
+.M-datePickerNew .date-container b {
+  font-weight: bold;
+}
+.M-datePickerNew .date-container em.w0 {
+  display: none;
+}
+.M-datePickerNew .date-container em.w1 {
+  width: 30px;
+}
+.M-datePickerNew .date-container em.w2 {
+  width: 60px;
+}
+.M-datePickerNew .date-container em.w3 {
+  width: 90px;
+}
+.M-datePickerNew .date-container em.w4 {
+  width: 120px;
+}
+.M-datePickerNew .date-container em.w5 {
+  width: 150px;
+}
+.M-datePickerNew .date-container em.w6 {
+  width: 180px;
+}
+.M-datePickerNew .date-head {
+  text-align: center;
+  padding: 5px 0;
+}
+.M-datePickerNew .date-head .date-year,
+.M-datePickerNew .date-head .date-month {
+  font-size: 14px;
+  line-height: 25px;
+  vertical-align: middle;
+}
+.M-datePickerNew .date-week {
+  height: 30px;
+}
+.M-datePickerNew .date-cal a,
+.M-datePickerNew .date-cal em {
+  color: #717071;
+  text-decoration: none;
+  font-weight: normal;
+  margin: 0 0;
+}
+.M-datePickerNew .date-cal a {
+  cursor: pointer;
+  padding: 1px 0 0 1px;
+  width: 30px;
+}
+.M-datePickerNew .date-cal a.cur {
+  font-weight: 700;
+}
+.M-datePickerNew .date-cal a.disabled {
+  color: #ccc;
+  cursor: default;
+}
+.M-datePickerNew .date-cal a.sel {
+  position: relative;
+  background: #898989;
+  color: #f7f7f7;
+}
+.M-datePickerNew .date-cal a.hov {
+  z-index: 1;
+  position: relative;
+  background: #dcdddc;
+}
+.M-datePickerNew .date-cal .hide {
+  display: none;
+}
+.M-datePickerNew .date-cal .show {
+  display: inline;
+}
+.M-dateResult {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.M-dateResult .front a {
+  margin-right: 10px;
+  padding: 4px 6px;
+  color: #777777;
+}
+.M-dateResult .front a.act {
+  background: #e7e7e7;
+}
+.M-dateResult .end {
+  display: inline-block;
+  position: relative;
+}
+.M-dateResult .end > input {
+  border-color: #ececec;
+}
+.M-dateResult .end > div {
+  position: absolute;
+  line-height: 30px;
+  height: 100%;
+  width: 25px;
+  text-align: center;
+  cursor: pointer;
+  height: 30px;
+  bottom: 0;
+}
+.M-dateResult .end > div i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -6px;
+  margin-top: -5px;
+}
+.M-dateResult .end .prev {
+  left: 0px;
+}
+.M-dateResult .end .next {
+  right: 0px;
+}
+.M-dateResult .end .next i {
+  margin-left: -4px;
+}
+.M-dateResultInput {
+  text-align: center;
+  width: 100%;
+  padding-right: 25px !important;
+  padding-left: 25px !important;
+}
+.M-dateResultInput.act {
+  cursor: auto;
+}
+.M-dateResultInput.error {
+  border-color: #ce401f !important;
+}
+.M-dateResultIcon {
+  display: none;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  margin-top: -7px;
+  color: #444;
+}
+.M-dateResult .M-dateSingle {
+  padding-left: 10px !important;
+  text-align: left;
+}
+.M-dateResult .M-dateSingleIcon {
+  display: inline-block;
+  left: auto;
+  right: 5px;
+}
+.M-tabBody {
+  background: white;
+}
+.M-tabBody > div,
+.M-tabButtonBody > div {
+  display: none;
+  padding: 10px 0;
+  position: relative;
+  min-height: 60px;
+}
+.M-tabBody > div.uk-active,
+.M-tabButtonBody > div.uk-active {
+  display: block;
+}
+.M-tabSetting {
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  margin-top: -45px;
+}
+.border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.M-Menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  min-height: 80;
+}
+.M-MenuCon {
+  height: 100%;
+  overflow: auto;
+}
+.M-MenuOptions {
+  padding: 4px 0;
+}
+.M-MenuOptions li {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.M-MenuOptions li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  padding: 0 0.875rem;
+}
+.M-MenuOptions li a:hover {
+  text-decoration: none;
+  background: #eee;
+  color: #333333;
+}
+.M-MenuOptionsMore {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  color: #A1A1A1;
+  font-size: 24px;
+  margin-top: -12px;
+}
+.M-MenuSearch {
+  position: relative;
+  z-index: 10;
+  background: #FFF;
+}
+.M-MenuSearchInput {
+  float: none;
+  text-indent: 20px;
+}
+.M-MenuSearch em {
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  cursor: pointer;
+  margin-top: -15px;
+}
+.M-MenuSearchClearWord {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px -30px;
+  width: 30px;
+  height: 30px;
+}
+.M-MenuSearchBtnClick {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px 0;
+  width: 30px;
+  height: 30px;
+}
+.M-MenuConfirm {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 150px;
+  height: 38px;
+  line-height: 35px;
+  z-index: 10;
+  padding: 5px;
+  border-bottom: 1px solid #EEE;
+  background: #F5F5F5;
+  display: flex;
+  flex-flow: row;
+}
+.M-MenuConfirm input[type=button] {
+  border: none;
+  background: inherit;
+}
+.M-MenuConfirm input[type=button]:focus {
+  outline: none;
+}
+.M-MenuConfirmButton {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 45%;
+  height: 100%;
+  background: #DFDFDF !important;
+  border-radius: 2px;
+}
+.M-MenuConfirmAll {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  flex: 1;
+  color: #0058B0;
+}
+.M-MenuConfirmShift {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  flex: 1;
+  color: #0058B0;
+}
+.M-MenuCheckBox {
+  display: inline-block;
+  margin-right: 10px;
+  width: 12px;
+  height: 12px;
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.M-MenuChecked {
+  background: #999;
+}
+.M-MenuDrop {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.M-MenuDrop .result {
+  font-size: 12px;
+}
+.M-MenuDrop .arrow i {
+  display: inline-block;
+  vertical-align: sub;
+}
+.M-MenuDrop .panelCon {
+  width: 100%;
+  position: relative;
+}
+.M-Menu.M-MenuDeepColor {
+  border: none;
+  width: auto;
+  background: none;
+  margin-top: -4px;
+  background: #3D4B4E;
+}
+.M-Menu.M-MenuDeepColor .M-MenuCon li a {
+  color: #F7F7F7;
+}
+.M-Menu.M-MenuDeepColor .M-MenuCon li a:hover {
+  background: #221814 !important;
+  color: #fff !important;
+}
+.M-Menu.M-MenuDeepColor .M-MenuCon .act a {
+  background: #221814 !important;
+  color: #fff !important;
+}
+.M-tagLabels {
+  position: relative;
+}
+.M-tagLabelsWrapper {
+  font-size: 14px;
+  margin: 0 0 15px;
+  padding: 10px 0;
+  min-height: 1.35em;
+  background: #F8F8F8;
+}
+.M-tagLabelsWrapper .M-tagLabelsSimpleContainer {
+  margin: 0px;
+}
+.M-tagLabels .M-commonInput input {
+  min-width: 300px;
+}
+.M-tagLabels p {
+  margin: 0 0 5px;
+}
+.M-tagLabels .spLabelTitle {
+  font-weight: bold;
+}
+.M-tagLabelsContainer,
+.M-tagLabelsSimpleContainer {
+  font-size: 12px;
+  margin: 0 0 15px;
+  padding: 10px 0px;
+  min-height: 1.35em;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+.M-tagLabelsContainer .spLabelTitle,
+.M-tagLabelsSimpleContainer .spLabelTitle {
+  font-weight: bold;
+  width: 60px;
+  text-align: right;
+  display: inline-block;
+}
+.M-tagLabelsContainer .wraper span,
+.M-tagLabelsSimpleContainer .wraper span {
+  margin-bottom: 5px;
+}
+.M-tagLabelsContainer span,
+.M-tagLabelsSimpleContainer span {
+  cursor: pointer;
+  margin: 0 5px 8px 0;
+  padding: 0 5px;
+  display: inline-block;
+}
+.M-tagLabelsContainer span:hover,
+.M-tagLabelsSimpleContainer span:hover {
+  color: #fff;
+  background-color: #2FAEEB;
+}
+.M-tagLabelsContainer span:hover em,
+.M-tagLabelsSimpleContainer span:hover em {
+  color: #fff;
+}
+.M-tagLabelsContainer em,
+.M-tagLabelsSimpleContainer em {
+  font-weight: normal;
+  font-size: 10px;
+  color: #BFBFBF;
+  margin: 0 0 0 5px;
+}
+.M-tagLabelsContainer .M-tagLabelsloading,
+.M-tagLabelsSimpleContainer .M-tagLabelsloading {
+  min-height: 1.35em;
+}
+.M-tagLabelsContainer .act,
+.M-tagLabelsSimpleContainer .act {
+  color: #FFF;
+  background-color: #2FAEEB;
+}
+.M-tagLabelsContainer .act em,
+.M-tagLabelsSimpleContainer .act em {
+  color: #FFF;
+}
+.M-tagLabelsContainer .theLabelRow,
+.M-tagLabelsSimpleContainer .theLabelRow {
+  font-size: 12px;
+  padding: 8px 20px;
+  min-height: 1.35em;
+  background: #f8f8f8;
+  border-radius: 5px;
+  position: relative;
+}
+.M-tagLabelsloading {
+  background: url(../images/loading.gif) 0 2px no-repeat;
+}
+.M-tagLabelsLabel {
+  font-size: 14px;
+  width: 70px;
+  text-align: right;
+  margin-right: 10px;
+  display: inline-block;
+}
+.M-tagLabelsInner {
+  min-height: 30px;
+  padding: 5px;
+  margin-left: 72px;
+  margin-top: 10px;
+}
+.M-tagLabelsInner span {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 2px 6px;
+  cursor: pointer;
+  background: #E7E7E7;
+  border-radius: 4px;
+}
+.M-tagLabelsInner span em {
+  display: none;
+}
+.M-tagLabelsInner .act {
+  color: #fff;
+  background: #50B9EB;
+}
+.M-tagLabelsInnerNoLable {
+  margin-left: 0;
+  padding-left: 0;
+}
+.M-tagLabelsInnerNoLable span {
+  margin-left: 0;
+}
+.M-tagLabelsMultiContainer {
+  font-size: 14px;
+  margin: 0 0 15px;
+  padding: 10px 20px;
+  min-height: 1.35em;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+.M-tagLabelsMultiContainer .theLabelRow {
+  margin: 5px 0;
+}
+.M-tagLabelsMultiContainer .theLabelRow span {
+  cursor: pointer;
+  margin: 0 5px 8px 0;
+  padding: 0 5px;
+  display: inline-block;
+}
+.M-tagLabelsMultiContainer .theLabelRow span:hover {
+  color: #fff;
+  background-color: #2FAEEB;
+}
+.M-tagLabelsMultiContainer .theLabelRow span:hover em {
+  color: #fff;
+}
+.M-tagLabelsMultiContainer .theLabelRow em {
+  font-weight: normal;
+  font-size: 10px;
+  color: #BFBFBF;
+  margin: 0 0 0 5px;
+}
+.M-tagLabelsMultiContainer .M-tagLabelsloading {
+  min-height: 1.35em;
+}
+.M-tagLabelsMultiContainer .act {
+  color: #50B9EB;
+}
+.M-tagLabelsListTypeBox {
+  min-height: 1.35em;
+}
+.M-tagLabels-allowCollapse {
+  position: relative;
+}
+.M-tagLabels-allowCollapse .wraper {
+  min-height: 1.35em;
+  overflow: hidden;
+  margin: -1.35em 2em 0 5.5em;
+}
+.M-tagLabels-allowCollapse .ctrlBnt {
+  right: 12px;
+  top: 12px;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  color: #1AA1E1;
+}
+.M-tagLabels-noCollapse div {
+  margin: -1.35em 0 0 3.5em;
+  min-height: 1.35em;
+}
+.M-tagLabels-noCollapse .ctrlBnt {
+  display: none;
+  color: #1AA1E1;
+}
+.M-accordionMenu {
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  min-width: 180px;
+}
+.M-accordionMenu-ul {
+  padding: 0 0 0 15px;
+  margin: 0;
+}
+.M-accordionMenu-item {
+  position: relative;
+}
+.M-accordionMenu-item a:hover {
+  color: #fff;
+  background: #202c33;
+}
+.M-accordionMenu-head {
+  display: block;
+  position: relative;
+}
+.M-accordionMenu-head-inner {
+  display: block;
+  margin-left: -18px;
+  padding: 8px 0 8px 10px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.M-accordionMenu-head .M-accordionMenu-html {
+  margin-left: 10px;
+  padding-left: 5px;
+  text-indent: 5px;
+  word-wrap: break-word;
+  max-width: 100%;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.M-accordionMenu-icon {
+  font-size: 18px;
+  line-height: 35px;
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+.M-accordionMenu-current,
+.M-accordionMenu-current:hover,
+.M-accordionMenu-current a,
+.M-accordionMenu-current a:hover {
+  color: #15b374;
+}
+.M-accordionMenu-current-parent {
+  font-weight: bold;
+  color: #fff;
+}
+.M-autoComplete {
+  position: relative;
+  padding-bottom: 20px;
+  width: 200px;
+}
+.M-autoComplete input {
+  box-sizing: border-box;
+  width: 198px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #49525d;
+  outline: none;
+  padding: 5px 40px 5px 5px;
+}
+.M-autoComplete input:focus {
+  border-color: #15b374;
+}
+.M-autoComplete-menu {
+  max-height: 150px;
+  *height: 150px;
+  padding: 15px;
+  background: #15b374;
+}
+.M-autoComplete-menuWrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 101;
+}
+.M-autoComplete-menuWrap-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-left: -4px;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  border: 8px solid transparent;
+  border-bottom-color: #15b374;
+}
+.M-autoComplete-menuContent {
+  margin: 0 -15px;
+  padding: 0;
+}
+.M-autoComplete-menuContent a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  color: #172128;
+  padding: 0 15px;
+}
+.M-autoComplete-menuContent a:hover,
+.M-autoComplete-menuContent a:active {
+  background: #0d915c;
+}
+.M-autoComplete-placeholder {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: inline-block;
+  width: 36px;
+  padding-left: 20px;
+  margin-left: -35px;
+  height: 30px;
+  line-height: 30px;
+  pointer-events: none;
+}
+.M-autoComplete-placeholder i {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: inline-block;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px 0;
+  width: 16px;
+  height: 16px;
+}
+.M-autoComplete-close {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  z-index: 100;
+  text-align: center;
+  background: #777;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+li .M-autoComplete-text {
+  color: #172128;
+}
+li .M-autoComplete-text:hover {
+  color: #172128;
+  text-decoration: none;
+}
+li .M-autoComplete-matchText,
+li .M-autoComplete-text:hover .M-autoComplete-matchText {
+  color: #ffffff;
+}
+.M-HighGrid {
+  position: relative;
+  background: #FFFFFF;
+  font-size: 13px;
+  overflow: hidden;
+}
+.M-HighGrid table {
+  border-collapse: separate;
+}
+.M-HighGrid td div.center {
+  text-align: center;
+}
+.M-HighGrid td div.left {
+  text-align: left;
+}
+.M-HighGrid td div.right {
+  text-align: right;
+}
+.M-HighGrid td.center {
+  text-align: center;
+}
+.M-HighGrid td.left {
+  text-align: left;
+}
+.M-HighGrid td.right {
+  text-align: right;
+}
+.M-HighGridList {
+  background: #F8F8F8;
+  border: 1px solid #ECECEC;
+  min-height: 400px;
+  position: relative;
+  display: table;
+  width: 100%;
+}
+.M-HighGridList td {
+  text-align: right;
+  white-space: nowrap;
+  border: solid #ECECEC;
+  border-width: 1px;
+  line-height: 23px;
+  padding: 8px 6px;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  position: relative;
+}
+.M-HighGridList td > .cell {
+  min-width: 100%;
+  min-height: 100%;
+}
+.M-HighGridList td > .lock,
+.M-HighGridList td > .unlock {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 10px;
+  width: 100%;
+  display: none;
+  color: #535B5E;
+  cursor: pointer;
+}
+.M-HighGridList td.currentLock > .lock {
+  display: block;
+}
+.M-HighGridList td.hoverCurrentLock > .lock {
+  display: none;
+}
+.M-HighGridList td.hoverCurrentLock > .unlock {
+  display: block;
+}
+.M-HighGridList td.hoverLock > .lock {
+  display: block;
+}
+.M-HighGridListEmpty td {
+  border: none;
+  text-align: left;
+}
+.M-HighGridListLayoutLeft {
+  vertical-align: top;
+  max-width: 100%;
+  display: table-cell;
+}
+.M-HighGridListLayoutLeft table {
+  width: 100%;
+}
+.M-HighGridListLayoutRight {
+  vertical-align: top;
+  max-width: 100%;
+  display: table-cell;
+}
+.M-HighGridListCorner {
+  overflow: hidden;
+  background: #F8F8F8;
+}
+.M-HighGridListCorner table.last-border-right-none tr td:last-of-type {
+  border-right: none;
+}
+.M-HighGridListCorner td {
+  text-align: center;
+}
+.M-HighGridListCornerTitle {
+  font-size: 12px;
+}
+.M-HighGridListCornerTitle td {
+  border-bottom: 1px solid #ECECEC;
+  border-right: 1px solid transparent;
+}
+.M-HighGridListCornerTitle i.metricTip {
+  display: inline-block;
+  vertical-align: -3px;
+  margin: 0 0 0 2px;
+  vertical-align: top;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -122px;
+  width: 11px;
+  height: 11px;
+}
+.M-HighGridListCornerAmount {
+  font-weight: bold;
+  font-size: 14px;
+  color: #545454;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f5f5f5), color-stop(1, #f8f8f8));
+}
+.M-HighGridListSidebar {
+  min-width: 0 !important;
+  min-height: 400px !important;
+}
+.M-HighGridListSidebar table.last-border-bottom-none tr:last-of-type td {
+  border-bottom: none;
+}
+.M-HighGridListSidebar table.last-border-right-none tr td:last-of-type {
+  border-right: none;
+}
+.M-HighGridListSidebar tr.even {
+  background: #FFF;
+}
+.M-HighGridListSidebarMenu {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -9px;
+  margin-top: -9px;
+  color: #bbb;
+  font-size: 18px;
+}
+.M-HighGridListSidebarMenu:hover {
+  color: #aaa;
+}
+.M-HighGridListHeader {
+  overflow: hidden;
+  background: #F8F8F8;
+}
+.M-HighGridListHeader table tr td:last-of-type {
+  border-right: none;
+}
+.M-HighGridListHeader td {
+  text-align: center;
+}
+.M-HighGridListHeaderTitle {
+  font-size: 12px;
+}
+.M-HighGridListHeaderTitle td {
+  border-bottom: 1px solid #ECECEC;
+  border-right: 1px solid transparent;
+}
+.M-HighGridListHeaderTitle i.metricTip {
+  display: inline-block;
+  vertical-align: -3px;
+  margin: 0 0 0 2px;
+  vertical-align: top;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -122px;
+  width: 11px;
+  height: 11px;
+}
+.M-HighGridListHeaderAmount {
+  font-weight: bold;
+  font-size: 14px;
+  color: #545454;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f5f5f5), color-stop(1, #f8f8f8));
+}
+.M-HighGridListHeaderAmount td {
+  text-align: right;
+}
+.M-HighGridListHeaderAmount td.empty {
+  border-right: 1px solid transparent;
+}
+.M-HighGridListContent {
+  overflow: hidden;
+  position: relative;
+  min-width: 0px !important;
+  min-height: 400px !important;
+}
+.M-HighGridListContent table tr td:last-of-type {
+  border-right: none;
+}
+.M-HighGridListContent table.last-border-bottom-none tr:last-of-type td {
+  border-bottom: none;
+}
+.M-HighGridListContent tr.even {
+  background: #FFF;
+}
+.M-HighGridListCustomCheckbox input {
+  display: none;
+}
+.M-HighGridListCustomCheckbox .custom-checkbox {
+  cursor: pointer;
+  position: relative;
+  color: #bbb;
+  font-size: 14px;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  vertical-align: -2px;
+}
+.M-HighGridListCustomCheckbox .custom-checkbox i {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  display: none;
+  color: #333333;
+}
+.M-HighGridListCustomCheckbox.change .custom-checkbox i {
+  display: block;
+}
+.M-HighGridListRowHover {
+  background: #EFFBFE !important;
+}
+.M-HighGridList .sortable:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.M-HighGridList .asc em {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -154px -93px;
+  width: 6px;
+  height: 8px;
+  margin-left: 5px;
+  display: inline-block;
+}
+.M-HighGridList .desc em {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -154px -101px;
+  width: 6px;
+  height: 8px;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: 2px;
+}
+.M-HighGridList .asc em,
+.M-HighGridList .desc em {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  margin-left: -3px;
+}
+.M-HighGridList .asc em {
+  top: -6px;
+}
+.M-HighGridListLayoutLeft {
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+}
+.M-HighGridListLayoutLeft:before {
+  top: 0;
+  width: 15px;
+  content: " ";
+  height: 100%;
+  right: -15px;
+  position: absolute;
+  box-shadow: 1px 0px 1px -1px #000000 inset;
+}
+.M-HighGridListLayoutLeft.shadow {
+  overflow: visible;
+}
+.M-HighGridListRowSelected {
+  font-weight: bold;
+}
+.M-HighGridListRowHighlight {
+  color: #00AC3E;
+  font-weight: bold;
+}
+.M-HighGridSidebarScroller {
+  display: none!important;
+}
+.M-HighGridDateRange {
+  display: none;
+  float: right;
+  font-size: 12px;
+  min-width: 100px;
+  padding-bottom: 10px;
+}
+.M-HighGridHeader {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  position: relative;
+  text-align: left;
+}
+.M-HighGridHeaderLeft {
+  display: inline-block;
+}
+.M-HighGridHeaderCustom {
+  display: inline-block;
+}
+.M-HighGridHeaderRight {
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+.M-HighGridSearch input {
+  border-color: #ececec;
+}
+.M-HighGridSearch .form-element-extra {
+  border-color: #ececec;
+}
+.M-HighGridRefreshAuto {
+  color: #444;
+  padding: 0 5px;
+  cursor: pointer;
+  line-height: 30px;
+  margin-right: 5px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.M-HighGridRefreshAuto i {
+  margin-right: 4px;
+}
+.M-HighGridRefreshAuto:hover {
+  background-color: #f5f5f5;
+}
+.M-HighGridRefresh button {
+  padding: 0 7px;
+  min-height: 25px;
+  line-height: 25px;
+  border-radius: 4px;
+  width: 30px;
+  background-color: #eee;
+}
+.M-HighGridRefresh button:focus {
+  outline: 0;
+}
+.M-HighGridRefresh button:hover {
+  background-color: #f5f5f5;
+}
+.M-HighGridRefresh .refNormal {
+  height: 30px;
+  padding: 0 9px;
+  vertical-align: top;
+}
+.M-HighGridRefresh .refNormal em {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -145px;
+  width: 12px;
+  height: 12px;
+}
+.M-HighGridBatch {
+  height: 30px;
+  padding: 0 10px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 4px;
+  position: relative;
+}
+.M-HighGridBatch:hover {
+  background-color: #f5f5f5;
+}
+.M-HighGridBatchAct {
+  background: #0D1F22;
+  color: #F7F7F7;
+}
+.M-HighGridBatchAct:hover {
+  background: #0D1F22;
+  color: #F7F7F7;
+}
+.M-HighGridExport {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  line-height: 34px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.M-HighGridExport em {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -157px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}
+.M-HighGridExport:hover {
+  background-color: #f5f5f5;
+}
+.M-HighGridCompare {
+  height: 30px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+.M-HighGridCompare em {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -169px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  display: none;
+}
+.M-HighGridCompare:hover {
+  background-color: #f5f5f5;
+}
+.M-HighGridCompareAct {
+  background: #0D1F22;
+  color: #F7F7F7;
+}
+.M-HighGridCompareAct:hover {
+  background: #0D1F22;
+  color: #F7F7F7;
+}
+.M-HighGridFixedHeightBtn {
+  cursor: pointer;
+  margin-left: 5px;
+  height: 28px;
+  color: #777777;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  text-shadow: none;
+}
+.M-HighGridFixedHeightBtn.act {
+  background: #ccc;
+}
+.M-HighGridFixedHeightBtn em {
+  vertical-align: middle;
+}
+.M-HighGridSelectedCount {
+  height: 28px;
+}
+.M-HighGridFilter {
+  height: 30px;
+  padding: 0 10px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.M-HighGridFilter:hover {
+  background-color: #f5f5f5;
+}
+.M-HighGridFilterAct {
+  background: #0D1F22;
+  color: #F7F7F7;
+}
+.M-HighGridFilterAct:hover {
+  background: #0D1F22;
+  color: #F7F7F7;
+}
+.M-HighGridFilterResultCon {
+  background: #F8F8F8;
+  width: 100%;
+  line-height: 30px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.M-HighGridFilterResultCon .result {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.M-HighGridFilterResultCon .result label {
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.M-HighGridFilterResultCon .result label span {
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 2px;
+}
+.M-HighGridFilterResultCon .result .line {
+  width: 100%;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  display: none;
+}
+.M-HighGridFilterResultCon .result:hover .line {
+  display: block;
+}
+.M-HighGridFilterResultCon .clearIcon {
+  color: #ca2828;
+  font-size: 14px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.M-HighGridFilterResultCon .clearText {
+  margin-right: 20px;
+  vertical-align: middle;
+  color: #ca2828;
+}
+.M-HighGridFilterSidebar {
+  z-index: 3;
+  position: absolute;
+  z-index: 101;
+  background: #fff;
+  transition-duration: .3s;
+  display: none;
+  left: 0px;
+  top: 0px;
+  width: 650px;
+  border-radius: 0px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.M-HighGridLoading {
+  display: none;
+  text-align: center;
+  background: #eee;
+  opacity: 0.4;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+.M-HighGridLoading i {
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+.M-HighGridTab {
+  margin: 0;
+  padding: 0;
+  float: left;
+  background: #Fff;
+  border: 1px solid #ECECEC;
+  border-bottom: none;
+}
+.M-HighGridTab ul {
+  padding-left: 0px;
+}
+.M-HighGridTabItem {
+  float: left;
+  color: #0D0D0D;
+  cursor: pointer;
+  display: inline;
+  padding: 8px 17px;
+  list-style: none;
+}
+.M-HighGridTabItem i {
+  padding: 0 7px;
+  cursor: pointer;
+  margin-right: -10px;
+  font-size: 15px;
+}
+.M-HighGridTabItem:hover {
+  background: #eee;
+}
+.M-HighGridTabActive {
+  cursor: default;
+  color: #FFFFFF;
+  background: #535B5E;
+}
+.M-HighGridTabActive:hover {
+  background: #535B5E !important;
+  color: #FFFFFF !important;
+}
+.M-HighGridTabActivePanel {
+  cursor: default;
+  background: #0D1F22;
+  color: #F7F7F7;
+}
+.M-HighGridTabActivePanel:hover {
+  background: #0D1F22 !important;
+  color: #F7F7F7 !important;
+}
+.M-HighGridTabCustom {
+  z-index: 20;
+  color: #F7F7F7;
+  min-width: 350px;
+  border-radius: 0;
+  white-space: nowrap;
+  border-top: none;
+  box-shadow: 0 1px 5px 2px rgba(118, 111, 109, 0.3);
+  background-color: #fff;
+}
+.M-HighGridTabCustom .M-dialogBody {
+  padding: 10px 0px 0px;
+  position: relative;
+}
+.M-HighGridTabCustom label input {
+  margin-right: 5px;
+  margin-left: 0;
+}
+.M-HighGridTabCustom table {
+  padding: 0 30px;
+}
+.M-HighGridTabCustom td {
+  line-height: 16px;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 0 15px 10px;
+  text-align: left;
+}
+.M-HighGridTabCustom td strong {
+  display: block;
+  color: #B7B7B7;
+  font-weight: 400;
+  margin-top: 10px;
+  padding: 0 0 8px 0;
+  font-size: 14px;
+}
+.M-HighGridTabCustom td label {
+  color: #646464;
+  display: block;
+  padding: 4px 0;
+  margin: 0;
+  border-bottom-color: #fff;
+}
+.M-HighGridTabCustom td label.change {
+  color: #000;
+}
+.M-HighGridTabCustom td label.change .custom-checkbox i {
+  display: block;
+}
+.M-HighGridTabCustom td label input {
+  display: none;
+}
+.M-HighGridTabCustom td label .custom-checkbox {
+  cursor: pointer;
+  position: relative;
+  margin-right: 5px;
+  color: #bbb;
+  font-size: 14px;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  vertical-align: -2px;
+}
+.M-HighGridTabCustom td label .custom-checkbox i {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  display: none;
+  color: #333;
+}
+.M-HighGridTabCustomTable {
+  overflow: auto;
+}
+.M-HighGridTabCustomFooter {
+  margin-top: 10px;
+  padding: 12px 20px 12px;
+  background: #F6F7F9;
+}
+.M-HighGridTabCustomFooter input {
+  min-width: 80px;
+}
+.M-HighGridTabCustomFooter .reset {
+  cursor: pointer;
+  color: #58AEDD;
+  line-height: 30px;
+}
+.M-HighGridTabCustomTriangle {
+  position: absolute;
+  top: 0px;
+  display: none;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -154px -109px;
+  width: 20px;
+  height: 15px;
+}
+.M-HighGridTabHide {
+  display: none;
+}
+.M-HighGridSubgridCtrl {
+  z-index: 3;
+  position: absolute;
+}
+.M-HighGridSubgridCtrlAnchor {
+  padding: 0px 4px;
+  text-align: center;
+  color: #C4C4C4;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  margin-top: -9px;
+  top: 50%;
+  right: 0px;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+.M-HighGridSubgridCtrlAnchor i {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+}
+.M-HighGridSubgridCtrlAnchor:hover {
+  text-decoration: none;
+  background: #A1A1A1;
+  color: #fff !important;
+}
+.M-HighGridSubgridCtrlAnchorAct {
+  text-decoration: none;
+  background: #A1A1A1;
+  color: #fff !important;
+}
+.M-HighGridSubgridCtrlAnchor .act {
+  text-decoration: none;
+  background: #A1A1A1;
+  color: #fff !important;
+}
+.M-HighGridSubgridCtrlAnchor.isAmount {
+  right: 6px;
+  color: #999;
+  font-size: 14px;
+}
+.M-HighGridSubgridCtrlAnchor.isAmount i {
+  margin-left: -7px;
+  margin-top: -7px;
+}
+.M-HighGridSubgridCtrlCon {
+  position: absolute;
+  display: none;
+}
+.M-HighGridSubgridCtrlCon .option {
+  height: 30px;
+  line-height: 30px;
+}
+.M-HighGridSubgridCtrlCon .angle {
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  color: rgba(13, 31, 34, 0.8);
+  font-size: 20px;
+}
+.M-HighGridSubgridCtrlCon .M-MenuCon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #3D4B4E;
+  border-radius: 4px;
+  height: auto;
+}
+.M-HighGrid .running {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -62px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.M-HighGrid .pause {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -82px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.M-HighGrid .store {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -102px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 1400px) and (min-width: 1300px) {
+  .G-frameWrapper .M-HighGridTab {
+    max-width: 400px;
+    max-height: 34px;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .G-frameWrapper .M-HighGridTab {
+    max-width: 360px;
+    max-height: 34px;
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .M-HighGridCompare span,
+  .M-HighGridCompare i {
+    display: none;
+  }
+  .M-HighGridCompare em {
+    display: inline-block;
+  }
+  .M-HighGridCompareAct {
+    background: #eee;
+  }
+  .M-HighGridCompareAct:hover {
+    background: #eee;
+  }
+}
+.M-excelGrid .M-HighGridListTop {
+  overflow: hidden;
+}
+.M-excelGrid .M-HighGridListTop td:last-child {
+  border-right-color: #EAEAEA;
+}
+.M-excelGrid .M-HighGridListHead {
+  background: #F8F8F8;
+}
+.M-excelGrid .M-HighGridListHead td {
+  text-align: center;
+  border-bottom: 1px solid #C8CDCC;
+  border-right: 1px solid transparent;
+}
+.M-excelGrid .M-HighGridListHead i.metricTip {
+  display: inline-block;
+  vertical-align: -3px;
+  margin: 0 0 0 2px;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -128px -122px;
+  width: 11px;
+  height: 11px;
+}
+.M-excelGrid .M-HighGridListBody {
+  overflow: hidden;
+  position: relative;
+}
+.M-excelGrid .M-HighGridListBody tr.even {
+  background: #FFF;
+}
+.M-excelGrid .M-HighGridListBodyMenu {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -9px;
+  margin-top: -9px;
+  color: #bbb;
+  font-size: 18px;
+}
+.M-excelGrid .M-HighGridListBodyMenu:hover {
+  color: #aaa;
+}
+.M-excelGrid .M-HighGridListContent {
+  min-height: 100% !important;
+}
+.M-drop {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.M-drop .result {
+  font-size: 12px;
+}
+.M-drop .result.multiCon {
+  min-height: 30px;
+}
+.M-drop .result.multiCon div {
+  float: left;
+  background: #F3F3F3;
+  padding: 0 8px;
+  border-radius: 4px;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 1px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.M-drop .result.multiCon div:hover {
+  text-decoration: line-through;
+}
+.M-drop .result.multiCon input {
+  border: none;
+  min-width: 20px;
+  float: left;
+  box-shadow: none;
+  padding: 2px 0;
+  margin-right: 4px;
+  margin-top: 2px;
+  margin-bottom: 1px;
+  width: 20px;
+}
+.M-drop .arrow {
+  font-size: 12px;
+}
+.M-drop .arrow i {
+  display: inline-block;
+  vertical-align: sub;
+  margin: 0 1px;
+}
+.M-drop .iconCon {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  color: #ccc;
+  font-size: 14px;
+  margin-top: -7px;
+}
+.M-drop .iconCon .do {
+  display: block;
+  cursor: default;
+}
+.M-drop .iconCon .cancel {
+  display: none;
+}
+.M-drop .panelCon {
+  width: 100%;
+  position: relative;
+}
+.M-drop.simple .form-element-group {
+  display: block;
+}
+.M-drop.simple .result {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-right: 30px;
+}
+.M-drop.simple .arrow {
+  display: none;
+}
+.M-drop.simple .iconCon {
+  right: 10px;
+}
+.M-drop.gray .result {
+  color: #333;
+  background: #F6F6F6;
+  border-color: #F6F6F6;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-right-width: 0px;
+  transition: none;
+}
+.M-drop.gray .arrow {
+  background: #F6F6F6;
+  border-color: #F6F6F6;
+  padding-left: 0px;
+  padding-right: 7px;
+}
+.M-drop.gray .arrow i {
+  border-width: 4px;
+  visibility: hidden;
+}
+.M-drop.pure .result {
+  color: #333;
+  background: #FFF;
+  border-color: #F6F6F6;
+  border-right-color: #FFF;
+  padding-left: 7px;
+  padding-right: 7px;
+  transition: none;
+}
+.M-drop.pure .arrow {
+  background: #FFF;
+  border-color: #F6F6F6;
+  padding-left: 0px;
+  padding-right: 7px;
+}
+.M-drop.pure .arrow i {
+  border-width: 4px;
+  visibility: hidden;
+}
+.M-drop.blue .result {
+  color: #fff;
+  background: #44A7E0;
+  border-color: #44A7E0;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-right-width: 0px;
+  transition: none;
+}
+.M-drop.blue .arrow {
+  background: #44A7E0;
+  border-color: #44A7E0;
+  padding-left: 0px;
+  padding-right: 7px;
+}
+.M-drop.blue .arrow i {
+  border-width: 4px;
+  visibility: hidden;
+}
+.M-drop.multi .result {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.M-dropPanel {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: auto;
+  cursor: default;
+}
+.M-dropPanel .arrowCon {
+  position: absolute;
+  top: -14px;
+  left: 0px;
+}
+.M-dropPanel .arrowCon .arrow {
+  display: block;
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -154px -109px;
+  width: 20px;
+  height: 15px;
+}
+.M-dropPanel .searchCon .searchBox {
+  padding: 5px;
+  position: relative;
+}
+.M-dropPanel .searchCon .searchBox .input {
+  text-indent: 20px;
+  width: 100%;
+}
+.M-dropPanel .searchCon .searchBox i {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  cursor: default;
+  margin-top: -15px;
+}
+.M-dropPanel .searchCon .searchBox .undo {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px -30px;
+  width: 30px;
+  height: 30px;
+  display: none;
+  cursor: pointer;
+}
+.M-dropPanel .searchCon .searchBox .do {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -68px 0;
+  width: 30px;
+  height: 30px;
+}
+.M-dropPanel .listCon {
+  width: 100%;
+}
+.M-dropPanel .subListCon > div {
+  width: 100%;
+  position: absolute;
+  margin-left: 8px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  background: white;
+  cursor: default;
+  min-width: 100px;
+  display: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+.M-dropPanel .subListCon > div .subArrow {
+  position: absolute;
+  left: -16px;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  border: 8px solid transparent;
+  border-right-color: #ccc;
+  top: 50%;
+  margin-top: -8px;
+}
+.M-dropPanel .toolbarCon {
+  width: 100%;
+}
+.M-dropPanel li {
+  width: 100%;
+  position: relative;
+}
+.M-dropPanel li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  padding: 0 0.875rem;
+  cursor: pointer;
+}
+.M-dropPanel li a:hover {
+  text-decoration: none;
+  background: #eee;
+}
+.M-dropPanel li a.groupTitle {
+  font-style: italic;
+  text-indent: 10px;
+}
+.M-dropPanel li .multiIcon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -6px;
+  display: none;
+}
+.M-dropPanel li .subIcon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -6px;
+}
+.M-dropPanel li.act {
+  font-weight: bold;
+  background-color: #f7f7f7;
+}
+.M-dropPanel li.act_multi .multiIcon {
+  display: inline-block;
+}
+.M-dropPanel li.highlight {
+  background: #f5f5f5;
+}
+.M-dropPanel li.spacing {
+  border-bottom: 1px solid #ccc;
+}
+.M-dropPanel li:nth-of-type(3) {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.M-dropPanel li:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.M-dropPanel .matchTips,
+.M-dropPanel .noDataTips {
+  display: none;
+}
+.M-dropPanel .matchTips a,
+.M-dropPanel .noDataTips a {
+  font-style: italic;
+  cursor: default;
+}
+.M-dropPanel .matchTips a:hover,
+.M-dropPanel .noDataTips a:hover {
+  background: none;
+}
+.M-dropPanel.deep {
+  background: #3D4B4E;
+}
+.M-dropPanel.deep ul {
+  padding: 4px 0;
+}
+.M-dropPanel.deep li a {
+  color: #F7F7F7;
+}
+.M-dropPanel.deep li a:hover {
+  background: #221814 !important;
+  color: #fff !important;
+}
+.M-dropPanel.deep .act a {
+  background: #221814 !important;
+  color: #fff !important;
+}
+.M-dropAdd {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.M-dropAdd .icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 2px 5px;
+}
+.M-dropAdd .icon i {
+  color: #FFF;
+}
+.M-dropAdd .title {
+  display: none;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.M-dropAdd .panelCon {
+  width: 100%;
+  position: relative;
+}
+.M-dropAdd .links {
+  display: inline-block;
+  margin-left: -10px;
+}
+.M-dropAdd .links a {
+  font-size: 13px;
+  margin-right: 10px;
+  vertical-align: middle;
+  padding: 6px 8px;
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+.M-dropAdd .links a i {
+  margin-right: 4px;
+  vertical-align: -1px;
+}
+.M-dropAdd .links a:hover {
+  background: #318dcb;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.icon-collapse-on {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -176px -14px;
+  width: 18px;
+  height: 14px;
+}
+.icon-collapse-on:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.icon-collapse-off {
+  background-image: url("../images/icons.png?0622");
+  background-repeat: no-repeat;
+  background-position: -176px 0;
+  width: 18px;
+  height: 14px;
+}
+.icon-collapse-off:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
