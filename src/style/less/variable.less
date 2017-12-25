@@ -1,0 +1,41 @@
+@css-prefix: W-;
+
+// 颜色
+@primary-color          : #2d8cf0;
+@info-color             : #909399;
+@success-color          : #19be6b;
+@warning-color          : #ff9900;
+@error-color            : #ed3f14;
+@link-color             : #2D8cF0;
+@link-hover-color       : tint(@link-color, 20%);
+@link-active-color      : shade(@link-color, 5%);
+@selected-color         : fade(@primary-color, 90%);
+@disable-color          : #bbbec4;
+
+// 边框颜色
+@border-color-base      : #dddee1;  // outside
+@border-color-split     : #e9eaec;  // inside
+
+// 背景色
+@background-color-base      : #f7f7f7;  // base
+@background-color-disabled  : #f3f3f3;
+@background-color-hover     : @background-color-disabled;
+
+// 阴影
+@shadow-color           : rgba(0, 0, 0, .2);
+@shadow-base            : 0 1px 6px @shadow-color;
+
+// 字体及行高
+@body-background        : #fff;
+@font-family            : "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+@title-color            : #1c2438;
+@text-color             : #495060;
+@font-size-base         : 14px;
+@font-size-small        : 12px;
+@line-height-base       : 1.5;
+@line-height-computed   : floor((@font-size-base * @line-height-base));
+
+// Input
+@input-height-base           : 32px;
+@input-height-large          : 36px;
+@input-height-small          : 24px;

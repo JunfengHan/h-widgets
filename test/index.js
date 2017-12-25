@@ -1,6 +1,7 @@
 define(function(require, exports) {
     var util = require('util');
     var pubjs = require('pubjs');
+    var $ = require('jquery');
     pubjs.use([
         '@plugins/model'
     ], function() {
@@ -8,7 +9,6 @@ define(function(require, exports) {
         //初始化PUBJS
         pubjs.init();
 
-        var container = document.querySelector('#widgetsContainer');
         var modeFile, modeName;
         var matches = location.search.match(router);
         if (matches.length > 1) {
@@ -21,7 +21,7 @@ define(function(require, exports) {
                     return false;
                 }
                 pubjs.core.create('main', factory, util.extend(configs && configs[modeName] || {}, {
-                    target: container
+                    target: $('#widgetsContainer')
                 }));
             });
         } else {

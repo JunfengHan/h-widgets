@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>widgets</title>
-    <link rel="stylesheet" href="/src/style/index.css">
+    <link rel="stylesheet" href="/src/style/css/index.css">
+    <link rel="stylesheet" href="/src/style/css/ionicons.css">
     <script src="/test/pubjs/source/libs/seajs/2.0.0/sea-debug.js"></script>
 </head>
 <body>
-    <div id="widgetsContainer"></div>
+    <div id="widgetsContainer">测试一下遮罩层样式怎么样</div>
     <script type="text/javascript">
         (function(Sea, Win, Doc) {
             var pubjs = 'test/pubjs/source/';
@@ -55,7 +56,7 @@
                     "@libs": PUBJS("libs"),
                     "@plugins": PUBJS("plugins"),
                     "@widgets": ROOT('/src'),
-                    "@widgetsConf": ROOT("config")
+                    "@widgetsConf": ROOT("/test/config")
                 },
                 preload: [
                     // 引入pubjs样式库

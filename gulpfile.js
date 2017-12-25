@@ -5,14 +5,14 @@ const sourcemaps = require('gulp-sourcemaps');
 const path = require('path');
 
 const lessPath = path.join(__dirname, './src/style/less');
-const stylePath = path.join(__dirname, './src/style');
+const cssPath = path.join(__dirname, './src/style/css');
 
 gulp.task('lesscompile', function() {
     return gulp.src(`${lessPath}/index.less`)
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(stylePath));
+    .pipe(gulp.dest(cssPath));
 });
 
 gulp.task('watch', function() {

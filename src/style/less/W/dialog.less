@@ -1,0 +1,70 @@
+.@{css-prefix}dialog {
+	position: absolute;
+	top: 120px;
+	left: 10%;
+	min-width: 350px;
+	_width: 350px;
+	background: #fff;
+	border-radius: 5px;
+	&-mask {
+		position: fixed;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    background-color: rgba(55,55,55,.6);
+	    height: 100%;
+	    z-index: 1000;
+	}
+	&-close {
+		font-size: 12px;
+	    position: absolute;
+	    right: 16px;
+	    top: 8px;
+	    overflow: hidden;
+	    cursor: pointer;
+
+		&:hover {
+			background-color: #f2f2f2;
+		}
+	}
+
+	&-head {
+		border-bottom: 1px solid #e9eaec;
+	    padding: 14px 16px;
+	    line-height: 1;
+
+	    &-title {
+		display: inline-block;
+	    width: 100%;
+	    height: 20px;
+	    line-height: 20px;
+	    font-size: 14px;
+	    color: #1c2438;
+	    font-weight: 700;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+		}
+	}
+
+	&-body {
+		padding: 16px;
+	    font-size: 12px;
+	    line-height: 1.5;
+	}
+
+	&-foot {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		border-top: 1px solid #e9eaec;
+	    padding: 12px 18px;
+	    text-align: right;
+	    .W-button-success {
+	    	margin-left: 20px;
+	    	margin-right: 20px;
+	    }
+	}
+}

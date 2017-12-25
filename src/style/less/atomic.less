@@ -1,0 +1,137 @@
+@import "mixins";
+
+/* 原子类 */
+
+.@{css-prefix} {
+	// 颜色
+	&-color {
+		&-primary {
+			color: @primary-color;
+		}
+		&-info {
+			color: @info-color;
+		}
+		&-success {
+			color: @success-color;
+		}
+		&-warning {
+			color: @warning-color;
+		}
+		&-error {
+			color: @error-color;
+		}
+		&-selected {
+			color: @selected-color;
+		}
+		&-disable {
+			color: @disable-color;
+		}
+	}
+	// 背景色
+	&-bg {
+		&-primary {
+			background-color: @primary-color;
+		}
+		&-info {
+			background-color: @info-color;
+		}
+		&-success {
+			background-color: @success-color;
+		}
+		&-warning {
+			background-color: @warning-color;
+		}
+		&-error {
+			background-color: @error-color;
+		}
+		&-selected {
+			background-color: @selected-color;
+		}
+		&-disable {
+			background-color: @disable-color;
+		}
+	}
+}
+
+// 行高
+.atomic-loop(line-height, lh, 16, 40, 1);
+
+// 高度
+.atomic-loop(height, h, 20, 5, 1);
+.atomic-loop(height, h, 50, 25, 5);
+.atomic-loop(height, h, 100, 60, 10);
+.atomic-loop(height, h, 500, 200, 100);
+
+// 宽度
+.@{css-prefix}w-auto {width: auto!important;}
+.atomic-loop(width, w, 20, 5, 1);
+.atomic-loop(width, w, 50, 25, 5);
+.atomic-loop(width, w, 100, 60, 10);
+.atomic-loop(width, w, 1500, 200, 100);
+
+// 宽度百分比
+.atomic-loop(width, w-per, 100, 5, 5, %);
+
+// margin
+.atomic-loop(margin-top, mt, 10, 0);
+.atomic-loop(margin-right, mr, 10, 0);
+.atomic-loop(margin-bottom, mb, 10, 0);
+.atomic-loop(margin-left, ml, 10, 0);
+.atomic-loop(margin-top, mt, 50, 15, 5);
+.atomic-loop(margin-right, mr, 50, 15, 5);
+.atomic-loop(margin-bottom, mb, 50, 15, 5);
+.atomic-loop(margin-left, ml, 50, 15, 5);
+.atomic-loop(margin-top, mt, 500, 100, 50);
+.atomic-loop(margin-right, mr, 500, 100, 50);
+.atomic-loop(margin-bottom, mb, 500, 100, 50);
+.atomic-loop(margin-left, ml, 500, 100, 50);
+// 负margin
+.atomic-loop(margin-left, ml-n, -1, -10);
+.atomic-loop(margin-top, mt-n, -1, -10);
+.atomic-loop(margin-right, mr-n, -1, -10);
+.atomic-loop(margin-bottom, mb-n, -1, -10);
+.atomic-loop(margin-left, ml-n, -1, -10);
+
+// padding
+.atomic-loop(padding-top, pt, 10, 0);
+.atomic-loop(padding-right, pr, 10, 0);
+.atomic-loop(padding-bottom, pb, 10, 0);
+.atomic-loop(padding-left, pl, 10, 0);
+.atomic-loop(padding-top, pt, 50, 15, 5);
+.atomic-loop(padding-right, pr, 50, 15, 5);
+.atomic-loop(padding-bottom, pb, 50, 15, 5);
+.atomic-loop(padding-left, pl, 50, 15, 5);
+
+// 定位
+.@{css-prefix}pr {position: relative;}
+.@{css-prefix}pa {position: absolute;}
+.@{css-prefix}tl {top: 0; left: 0;}
+.@{css-prefix}tr {top: 0; right: 0;}
+.@{css-prefix}bl {bottom: 0; left: 0;}
+.@{css-prefix}br {bottom: 0; right: 0;}
+.@{css-prefix}z1 {z-index: 1;}
+.@{css-prefix}z2 {z-index: 2;}
+.@{css-prefix}z10 {z-index: 10;}
+.@{css-prefix}z99 {z-index: 99;}
+.@{css-prefix}z100 {z-index: 100;}
+.@{css-prefix}z999 {z-index: 999;}
+
+// 浮动
+.@{css-prefix}fl {float: left;}
+.@{css-prefix}fr {float: right;}
+.@{css-prefix}cl {clear: both;}
+.@{css-prefix}clearfix {.clearfix();}
+
+// 文字
+// 文字大小
+.atomic-loop(font-size, fs, 25, 12);
+
+.@{css-prefix}tc {text-align: center !important;} //居中
+.@{css-prefix}tl {text-align: left !important;}   //左对齐
+.@{css-prefix}tr {text-align: right !important;}  //右对齐
+.@{css-prefix}text-limit {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}

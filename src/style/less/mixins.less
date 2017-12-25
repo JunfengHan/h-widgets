@@ -1,0 +1,55 @@
+@import 'variable.less';
+
+// 原子类循环
+.atomic-loop(@property: width, @klazz: w, @max, @i: 0, @range: 1, @u: px) when(@i <= @max) {
+	@index: abs(@i);
+	.@{css-prefix}@{klazz}@{index} {
+		@{property}: unit(@i, @u)!important;
+	}
+	.atomic-loop(@property, @klazz, @max, @i + @range, @range, @u);
+}
+
+// clearfix
+.clearfix() {
+    zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+        visibility: hidden;
+        font-size: 0;
+        height: 0;
+    }
+}
+
+// 三角
+.triangle(@size: 5px, @arr: transparent transparent rgba(0, 0, 0, 0.6) transparent) {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	content: " ";
+	border-width: @size;
+	border-color: @arr;
+	border-style: solid;
+}
+
+// 按钮
+.button-color(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+}
+.button-variant(@color; @background; @border) {
+    .button-color(@color; @background; @border);
+
+    &:hover {
+        .button-color(tint(@color, 20%); tint(@background, 20%); tint(@border, 20%));
+    }
+    &:active,
+    &.active {
+        .button-color(shade(@color, 5%); shade(@background, 5%); shade(@background, 5%));
+    }
+}

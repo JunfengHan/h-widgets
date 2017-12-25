@@ -1,0 +1,111 @@
+.@{css-prefix}form {
+	// 区块，区块标题用h2
+	&-section {
+		position: relative;
+		margin-left: 0;
+		margin-right: 0;
+		height: auto;
+		display: block;
+		border: 1px solid @border-color-base;
+		border-radius: 6px;
+		margin-bottom: 20px;
+		transition: all .2s ease-in-out;
+		&-title {
+			font-size: 20px;
+			line-height: 32px;
+			margin-bottom: 15px;
+			margin-top: 36px;
+		}
+		&:hover {
+			box-shadow: 0 2px 7px rgba(0,0,0,.15);
+			border-color: transparent;
+			position: relative
+		}
+
+		// 垂直分割虚线
+		&-split {
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			border: 1px dashed @border-color-split;
+		}
+	}
+
+	// 默认label和content同一行，label右对齐
+	&-item {
+		margin-bottom: 24px;
+		vertical-align: top;
+		.clearfix();
+	
+		// label 
+		&-label {
+			text-align: right;
+			vertical-align: middle;
+			float: left;
+			font-size: @font-size-small;
+			color: @text-color;
+			line-height: 1;
+			padding: 10px 12px 10px 0;
+			box-sizing: border-box;
+		}
+
+		// 内容
+		&-content {
+			position: relative;
+			line-height: 32px;
+			font-size: @font-size-small;
+		}
+
+		// 必填
+		&-required &-label:before {
+			content: "*";
+			display: inline-block;
+			margin-right: 4px;
+			line-height: 1;
+			font-family: SimSun;
+			font-size: @font-size-small;
+			color: @error-color
+		}
+
+		// 错误提示
+		&-error {
+			&-tip {
+				display: block;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				line-height: 1;
+				padding-top: 6px;
+				color: @error-color;
+			}
+			& .@{css-prefix}input, & .@{css-prefix}textarea {
+				border: 1px solid @error-color;
+				&:hover {
+					border-color: @error-color;
+				}
+				&:focus {
+					border-color: @error-color;
+					outline: 0;
+					box-shadow: 0 0 0 2px fade(@error-color, 20%);
+				}
+				&-icon {
+					color: @error-color;
+				}
+			}
+		}
+	}
+
+	// label左对齐
+	&-label-left &-item-label {
+		text-align: left;
+	}
+
+	// label在上
+	&-label-top &-item-label {
+		float: none;
+		display: inline-block;
+		padding: 0 0 10px
+	}
+}
