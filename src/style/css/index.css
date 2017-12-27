@@ -1762,6 +1762,50 @@ samp {
   _width: 350px;
   background: #fff;
   border-radius: 5px;
+  animation: dialogBaseIn 1.2s;
+  -moz-animation: dialogBaseIn 1.2s;
+  -webkit-animation: dialogBaseIn 1.2s;
+  -o-animation: dialogBaseIn 1.2s;
+}
+@keyframes dialogBaseIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dialogBaseIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes dialogBaseIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes dialogBaseIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes dialogBaseIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .W-dialog-mask {
   position: fixed;
@@ -1774,7 +1818,8 @@ samp {
   z-index: 1000;
 }
 .W-dialog-close {
-  font-size: 12px;
+  font-size: 16px;
+  color: #808080;
   position: absolute;
   right: 16px;
   top: 8px;
@@ -1818,6 +1863,78 @@ samp {
 .W-dialog-foot .W-button-success {
   margin-left: 20px;
   margin-right: 20px;
+}
+@keyframes notifyin {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+@-moz-keyframes notifyin {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+@-webkit-keyframes notifyin {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+@-o-keyframes notifyin {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+.W-dialogNotify {
+  width: 300px;
+  height: 36px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  animation: notifyin 1s;
+  -moz-animation: notifyin 1s;
+  -webkit-animation: notifyin 1s;
+  -o-animation: notifyin 1s;
+}
+.W-dialogNotifyIcon {
+  width: 60px;
+  height: 36px;
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+}
+.W-dialogNotify .ion-alert {
+  color: #909399;
+}
+.W-dialogNotify .ion-checkmark-circled {
+  color: #19be6b;
+}
+.W-dialogNotify .ion-close-circled {
+  color: #ed3f14;
+}
+.W-dialogNotify .ion-alert-circled {
+  color: #ff9900;
+}
+.W-dialogNotify .ion-information-circled {
+  color: #2d8cf0;
+}
+.W-dialogNotifyMessage {
+  width: 240px;
+  height: 36px;
+  display: inline-block;
+  margin-top: 0;
+  line-height: 36px;
+  float: right;
 }
 .W-switch {
   width: 48px;

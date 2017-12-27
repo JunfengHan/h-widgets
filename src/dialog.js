@@ -118,7 +118,7 @@ define(function(require, exports) {
 
 			// 右上角关闭按钮
 			if (c.showClose) {
-				doms.close = $('<div class="W-dialog-close icon-close">X</div>')
+				doms.close = $('<div class="W-dialog-close ion-close"></div>')
 					.attr('title', LANG('关闭'))
 					.addClass(styles.closeClass)
 					.appendTo(el);
@@ -568,4 +568,258 @@ define(function(require, exports) {
 		}
 	});
 	exports.base = Base;
+
+	var Alert = Base.extend({
+		init: function(config, parent) {
+			config = pubjs.conf(config, {
+				'width': 350,
+				'data': null,
+				'target': $(BODY_ELEMENT),
+				'buttons': ['cancel', 'ok'],
+				'buttonConfig': {
+					'ok': {
+						'btnText': LANG('确定')
+					},
+					'cancel': {
+					}
+				},
+				'class': 'W-dialogAlert',
+				'showClose': false,
+				'drag': false,
+				'stopPageScroll': false,
+				// 尺寸大小对应表
+				'sizeDimension': {
+					's': {'width':350, 'maxHeight': 160, 'minHeight': 150, 'height': 'auto'},
+					'm': {'width':400, 'maxHeight': 200, 'minHeight': 150, 'height': 'auto'}
+				},
+			});
+
+			// 事件时间戳
+			this.$timeStamp = 0;
+
+			this.Super('init', arguments);
+		},
+		afterBuild: function() {
+			this.Super('afterBuild', arguments);
+
+			var data = this.getConfig('data');
+			if (data) {
+				this.setData(data).show();
+			}
+			return this;
+		},
+		setData: function(data) {
+			var c = this.getConfig();
+			var con = this.$doms.body;
+			c.data = data;
+
+			con.empty();
+			if (data.html) {
+				if (util.isString(data.html)){
+					con.html(data.html);
+				} else {
+					con.append(data.html);
+				}
+			} else if (util.isString(data.text)) {
+				con.append($('<p class="con" />').text(data.text));
+			}
+
+			if (data.type == 'confirm') {
+				this.toggleButton('ok,cancel')
+					.setTitle(LANG('确认')).bindEvent(true);
+			} else {
+				this.toggleButton('ok')
+					.setTitle(LANG('提示')).bindEvent(data.onTop);
+			}
+			this.update();
+			return this;
+		},
+		onOk: function() {
+			var data = this.getConfig('data');
+
+			if (data.callback && util.isFunc(data.callback)) {
+				data.callback.call(this, false);
+			}
+			if (!data.next.call(this)) {
+				this.hide();
+			}
+			return false;
+		},
+		onCancel: function() {
+			var data = this.getConfig('data');
+
+			if (data.callback && util.isFunc(data.callback)) {
+				data.callback.call(this, false);
+			}
+			if (!data.next.call(this)) {
+				this.hide();
+			}
+			return false;
+		},
+		hide: function() {
+			this.Super('hide');
+			this.bindEvent(true);
+			return this;
+		},
+		bindEvent: function(unbind) {
+			var self = this;
+			if (unbind) {
+				$(document).unbind('keypress.alert');
+
+				if (self.$mask) {
+					self.uiUnbind(self.$)
+				}
+			} else {
+				var data = self.getConfig().data;
+				if (data.type == 'alert') {
+					// 点击回车隐藏弹框
+					$(document).bind('keypress.alert', function(e){
+						if(e.keyCode == 13) {
+							if (!data.next.call(self)) {
+								self.onCancel();
+							}
+						}
+						return false;
+					});
+
+					// 点击空白处隐藏弹框
+					if (self.$mask) {
+						// 点击弹框内
+						self.uiBind(self.el, 'mouseup tap', function(e) {
+							self.$timeStamp
+						});
+						// 点击蒙版
+						self.uiBind(self.$mask, 'mouseup tap', function(e) {
+							if (self.$timeStamp != e.timeStamp) {
+								// 隐藏
+								if (!data.next.call(self)) {
+									self.onCancel();
+								}
+							}
+						});
+					}
+				}
+			}
+		}
+	});
+	exports.alert = Alert;
+
+	// 请使用pubjs.notify(message, title, type);
+	var Notify = view.container.extend({
+		init: function(config, parent) {
+			config = pubjs.conf(config, {
+				'class': 'W-dialogNotify',
+				'type': 'info',
+				'target': pubjs.DEFAULT_POPUP_CONTAINER,
+				'time': 5000,
+				'offset': 0,
+				'data': null,
+				'isFixed': false,   // 是否固定定位
+				'vertical': 'top'   // 垂直位置
+			});
+
+			this.Super('init', arguments);
+		},
+		afterBuild: function() {
+			var el = this.getDOM();
+			var doms = this.$doms = {};
+			doms.icon = $('<div class="W-dialogNotifyIcon"></div>').appendTo(el);
+			doms.message = $('<p class="W-dialogNotifyMessage"/>').appendTo(el);
+
+			this.uiBind(el, 'click', 'onNext');
+
+			var data = this.getConfig('data');
+			if (data) {
+				this.setData(data).show();
+			}
+
+			return this;
+		},
+		show: function() {
+			var el = this.getDOM();
+			var c = this.getConfig();
+
+			el.show();
+
+			var w = el.outerWidth(),
+				h = el.outerHeight(),
+				d = document,
+				b = (d.compatMode === "CSS!Compat"?d.documentElement:d.body),
+				ch = b.clientHeight,
+				cw = b.clientWidth,
+				st = Math.max(d.documentElement.scrollTop, d.body.scrollTop),
+				sl = Math.max(d.documentElement.scrollLeft, d.body.scrollLeft);
+
+			var topMap = {
+				'top': 60,
+				'middle': parseInt(st + (ch - h) / 2, 10)
+			};
+
+			el.css({
+				'top': topMap[c.vertical],
+				'left': parseInt(sl + (cw - w) / 2, 10),
+				'z-index': maxZIndex + 100
+			});
+
+			if (c.isFixed) {
+				el.css({'position': 'fixed', 'top': 10});
+			} else {
+				el.css({'position': 'absolute', 'top': topMap[c.vertical]});
+			}
+		},
+		hide: function() {
+			this.getDOM().animate({top: '-60px'}, 600);
+			return this;
+		},
+		onNext: function() {
+			var self = this;
+			var data = this.getConfig('data');
+			if (data) {
+				self.hide();
+			}
+			return false;
+		},
+		setData: function(data) {
+			if (this.$tid) {
+				clearTimeout(this.$tid);
+			}
+
+			var doms = this.$doms;
+			var el = this.getDOM();
+			var notifyIcon = $('.W-dialogNotifyIcon');
+			var c = this.getConfig();
+			c.data = data;
+			if (util.isString(data.message)) {
+				doms.message.text(data.message);
+			} else {
+				doms.message.empty().append(data.message);
+			}
+			var type = this.$type = data.type || c.type;
+			switch (type) {
+				case 'info':
+				case 'notify':
+					notifyIcon.removeClass('ion-checkmark-circled ion-close-circled ion-alert-circled ion-information-circled').addClass('ion-alert');
+					break;
+				case 'success':
+					notifyIcon.removeClass('ion-alert ion-close-circled ion-alert-circled ion-information-circled').addClass('ion-checkmark-circled');
+					break;
+				case 'danger':
+				case 'error':
+					notifyIcon.removeClass('ion-alert ion-checkmark-circled ion-alert-circled ion-information-circled').addClass('ion-close-circled');
+					break;
+				case 'warning':
+				case 'warn':
+					notifyIcon.removeClass('ion-alert ion-checkmark-circled ion-close-circled ion-information-circled').addClass('ion-alert-circled');
+					break;
+				case 'primary':
+					notifyIcon.removeClass('ion-alert ion-checkmark-circled ion-close-circled ion-alert-circled').addClass('ion-information-circled');
+					break;
+			}
+
+			this.$tid = this.setTimeout('onNext', this.getConfig().time);
+
+			return this;
+		}
+	});
+	exports.notify = Notify;
 })

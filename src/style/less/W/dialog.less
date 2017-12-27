@@ -6,6 +6,32 @@
 	_width: 350px;
 	background: #fff;
 	border-radius: 5px;
+
+	@keyframes dialogBaseIn {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+	@keyframes dialogBaseIn {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+	@-moz-keyframes dialogBaseIn {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+	@-webkit-keyframes dialogBaseIn {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+	@-o-keyframes dialogBaseIn {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+	animation: dialogBaseIn 1.2s;
+	-moz-animation: dialogBaseIn 1.2s;
+	-webkit-animation: dialogBaseIn 1.2s;
+	-o-animation: dialogBaseIn 1.2s;
+
 	&-mask {
 		position: fixed;
 	    top: 0;
@@ -17,7 +43,8 @@
 	    z-index: 1000;
 	}
 	&-close {
-		font-size: 12px;
+		font-size: 16px;
+		color: #808080;
 	    position: absolute;
 	    right: 16px;
 	    top: 8px;
@@ -66,5 +93,63 @@
 	    	margin-left: 20px;
 	    	margin-right: 20px;
 	    }
+	}
+
+	@keyframes notifyin {
+		0%   {top: -60px;}
+		100% {top: 60px;}
+	}
+	@-moz-keyframes notifyin {
+		0%   {top: -60px;}
+		100% {top: 60px;}
+	}
+	@-webkit-keyframes notifyin {
+		0%   {top: -60px;}
+		100% {top: 60px;}
+	}
+	@-o-keyframes notifyin {
+		0%   {top: -60px;}
+		100% {top: 60px;}
+	}
+
+	&Notify {
+		width: 300px;
+		height: 36px;
+		box-shadow: @shadow-base;
+		border-radius: 4px;
+		animation: notifyin 1s;
+		-moz-animation: notifyin 1s;
+		-webkit-animation: notifyin 1s;
+		-o-animation: notifyin 1s;
+		&Icon {
+			width: 60px;
+			height: 36px;
+			display: inline-block;
+			text-align: center;
+			line-height: 36px;
+		}
+		.ion-alert {
+			color: @info-color;
+		}
+		.ion-checkmark-circled {
+			color: @success-color;
+		}
+		.ion-close-circled {
+			color: @error-color;
+		}
+		.ion-alert-circled {
+			color: @warning-color;
+		}
+		.ion-information-circled {
+			color: @primary-color;
+		}
+		&Message {
+			width: 240px;
+			height: 36px;
+			display: inline-block;
+			margin-top: 0;
+			line-height: 36px;
+			float: right;
+		}
 	}
 }

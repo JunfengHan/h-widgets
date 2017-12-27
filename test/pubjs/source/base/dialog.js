@@ -839,7 +839,7 @@ define(function(require, exports){
 		},
 		onNext: function(){
 			var self = this;
-			var data = self.getConfig('data');
+			var data = this.getConfig('data');
 			if (data && !data.next.call(self)){
 				self.hide();
 			}
