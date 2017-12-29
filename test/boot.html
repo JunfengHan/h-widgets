@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/style/css/index.css">
+    <link rel="stylesheet" href="/src/style/css/ionicons.css">
+    <script src="/test/pubjs/source/libs/seajs/2.0.0/sea-debug.js"></script>
+</head>
+<body>
+    <div id="widgetsContainer" style="position: absolute;top: 40%;left: 40%;"></div>
+    <script type="text/javascript">
+        (function(Sea, Win, Doc) {
+            var pubjs = 'test/pubjs/source/';
+            var path = Win.location.href.split('?').shift();
+            var root = path;
+
+            // 项目根目录修正
+            function ROOT(path) {
+                if (root && path.charAt(0) != '/') {
+                    return root + path;
+                }
+                return path;
+            }
+            // 框架根目录修正
+            function PUBJS(path) {
+                if (path.charAt(0) != '/') {
+                    return pubjs + path;
+                }
+                return path;
+            }
+            // 返回SeaJS配置信息
+            function sea_config() {
+                return ;
+            }
+
+            window.ROOT = ROOT;
+            window.PUBJS = PUBJS;
+            window._T = window.LANG = function(t) {return t;}
+
+            Sea.config({
+                base: ROOT("/"),
+                alias: {
+                    // 基本模块缩写
+                    "pubjs": "@core/pub.js",
+                    "util": "@core/util.js",
+                    "jquery": "@libs/jquery/jquery-1.8.3.min.js",
+                },
+                paths: {
+                    // 目录缩写
+                    "@core": PUBJS("core"),
+                    "@base": PUBJS("base"),
+                    "@libs": PUBJS("libs"),
+                    "@plugins": PUBJS("plugins"),
+                    "@widgets": ROOT('/src'),
+                    "@widgetsConf": ROOT("/test/data")
+                },
+                preload: [
+                    // 引入pubjs样式库
+                    // PUBJS('resources/css/uikit.min.css'),
+                    // PUBJS('resources/css/icomoon/style.css'),
+                    // PUBJS('resources/css/subcss/subcss.css'),
+                    // PUBJS('resources/css/app.css')
+                ],
+                debug: 0
+            });
+            Sea.use('test/boot.js');
+
+        })(seajs, window, document);
+    </script>
+</body>
+
+</html>

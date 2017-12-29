@@ -575,12 +575,17 @@ define(function(require, exports) {
 				'width': 350,
 				'data': null,
 				'target': $(BODY_ELEMENT),
-				'buttons': ['cancel', 'ok'],
+				'buttons': ['cancel', "ok"],
 				'buttonConfig': {
-					'ok': {
-						'btnText': LANG('确定')
-					},
 					'cancel': {
+						"type": "info",
+						"btnText": LANG('取消'),
+						"attr": {"data-action":"onCancel"}
+					},
+					'ok': {
+						"type": "success",
+						"btnText": LANG('确定'),
+						"attr": {"data-action":"onOk"}
 					}
 				},
 				'class': 'W-dialogAlert',
@@ -591,7 +596,7 @@ define(function(require, exports) {
 				'sizeDimension': {
 					's': {'width':350, 'maxHeight': 160, 'minHeight': 150, 'height': 'auto'},
 					'm': {'width':400, 'maxHeight': 200, 'minHeight': 150, 'height': 'auto'}
-				},
+				}
 			});
 
 			// 事件时间戳
@@ -606,6 +611,10 @@ define(function(require, exports) {
 			if (data) {
 				this.setData(data).show();
 			}
+
+			var el = this.getDOM();
+			this.uiBind($(document), 'mouseup' , 'hide');
+
 			return this;
 		},
 		setData: function(data) {
@@ -708,13 +717,13 @@ define(function(require, exports) {
 	var Notify = view.container.extend({
 		init: function(config, parent) {
 			config = pubjs.conf(config, {
-				'class': 'W-dialogNotify',
+				'class': 'W-dialog W-dialogNotify',
 				'type': 'info',
 				'target': pubjs.DEFAULT_POPUP_CONTAINER,
 				'time': 5000,
 				'offset': 0,
 				'data': null,
-				'isFixed': false,   // 是否固定定位
+				'isFixed': true,   // 是否固定定位
 				'vertical': 'top'   // 垂直位置
 			});
 
@@ -762,7 +771,7 @@ define(function(require, exports) {
 			});
 
 			if (c.isFixed) {
-				el.css({'position': 'fixed', 'top': 10});
+				el.css({'position': 'fixed', 'top': topMap[c.vertical]});
 			} else {
 				el.css({'position': 'absolute', 'top': topMap[c.vertical]});
 			}

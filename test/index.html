@@ -1,78 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>widgets</title>
-    <link rel="stylesheet" href="/src/style/index.css">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/style/css/index.css">
-    <link rel="stylesheet" href="/src/style/css/ionicons.css">
-    <script src="/test/pubjs/source/libs/seajs/2.0.0/sea-debug.js"></script>
 </head>
 <body>
-    <div id="widgetsContainer">测试一下遮罩层样式怎么样</div>
-    <script type="text/javascript">
-        (function(Sea, Win, Doc) {
-            var pubjs = 'test/pubjs/source/';
-            var path = Win.location.href.split('?').shift();
-            var root = path;
-
-            // 项目根目录修正
-            function ROOT(path) {
-                if (root && path.charAt(0) != '/') {
-                    return root + path;
-                }
-                return path;
-            }
-            // 框架根目录修正
-            function PUBJS(path) {
-                if (path.charAt(0) != '/') {
-                    return pubjs + path;
-                }
-                return path;
-            }
-            // 返回SeaJS配置信息
-            function sea_config() {
-                return ;
-            }
-
-            window.ROOT = ROOT;
-            window.PUBJS = PUBJS;
-            window._T = window.LANG = function(t) {return t;}
-
-            Sea.config({
-                base: ROOT("/"),
-                alias: {
-                    // 基本模块缩写
-                    "pubjs": "@core/pub.js",
-                    "util": "@core/util.js",
-                    "jquery": "@libs/jquery/jquery-1.8.3.min.js",
-                },
-                paths: {
-                    // 目录缩写
-                    "@core": PUBJS("core"),
-                    "@base": PUBJS("base"),
-                    "@libs": PUBJS("libs"),
-                    "@plugins": PUBJS("plugins"),
-                    "@widgets": ROOT('/src'),
-                    "@widgetsConf": ROOT("/test/config")
-                },
-                preload: [
-                    // 引入pubjs样式库
-                    // PUBJS('resources/css/uikit.min.css'),
-                    // PUBJS('resources/css/icomoon/style.css'),
-                    // PUBJS('resources/css/subcss/subcss.css'),
-                    // PUBJS('resources/css/app.css')
-                ],
-                debug: 0
-            });
-            Sea.use('test/index.js');
-
-        })(seajs, window, document);
-    </script>
+    <style>
+        .item {
+            background-color: #ccffcc;
+            width: 300px;
+            border-radius: 10px;
+            padding-bottom: 20px;
+        }
+        .item>.name {
+            height: 36px;
+            font-size: 16px;
+            padding-left: 20px;
+            line-height: 36px;
+            margin-bottom: 30px;
+        }
+        .item p {
+            height: 24px;
+            line-height: 24px;
+        }
+        .item p a {
+            padding-left: 10px;
+            text-decoration: none;
+            color: #8c8c8c;
+        }
+    </style>
+    <div>
+        <div class="item">
+            <p class="name">王稳</p>
+            <p><a href="http://localhost:7777/test/boot.html?mod=input.textInput">inputText组件</a></p>
+            <p><a href="http://localhost:7777/test/boot.html?mod=radio_checkbox.radioGroup">单选按钮组件radio</a></p>
+            <p><a href="http://localhost:7777/test/boot.html?mod=radio_checkbox.checkboxGroup">多选按钮组件checkbox</a></p>
+        </div>
+        <div class="item">
+            <p class="name">韩俊峰</p>
+            <p><a href="http://localhost:7777/test/boot.html?mod=dialog.base">dialog 对话框基础组件</a></p>
+            <p><a href="http://localhost:7777/test/boot.html?mod=dialog.alert">dialog 对话框的 alert 组件</a></p>
+            <p><a href="http://localhost:7777/test/boot.html?mod=dialog.notify">dialog 对话框的 notify 组件</a></p>
+            <p><a href="http://localhost:7777/test/boot.html?mod=backTop.base">backTop 返回顶部</a></p>
+        </div>
+    </div>
 </body>
-
 </html>

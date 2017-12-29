@@ -1,3 +1,61 @@
-input {
-    width:10px;
+.@{css-prefix}input {
+    &-s {
+        position: relative;
+        display: inline-block;
+        input {
+            height: @input-height-small;
+            padding: 0 @font-size-base/2;
+        }
+    }
+    &-m {
+        position: relative;
+        display: inline-block;
+        input {
+            height: @input-height-base;
+            padding: 0 @font-size-base/2;
+        }
+    }
+    &-l {
+        position: relative;
+        display: inline-block;
+        input {
+            height: @input-height-large;
+            padding: 0 @font-size-base/2;
+        }
+    }
+    
 }
+.W-input-icon-space(@inputSize) {
+    .@{css-prefix}input {
+        &-prefix {
+            input {
+                padding-left: @font-size-base*2;
+            }
+        }
+        &-prefix-icon {
+            position: absolute;
+            left: 0;
+            font-size: @font-size-base;
+            text-align: center;
+            width: @font-size-base*2;
+            line-height: @inputSize - 4px;
+        }
+        &-suffix{
+            input {
+                padding-right: @font-size-base*2;
+            }
+        }
+        &-suffix-icon {
+            position: absolute;
+            right: 0;
+            font-size: @font-size-base;
+            text-align: center;
+            width: @font-size-base*2;
+            line-height: @inputSize - 4px;
+        }
+    }
+}
+.W-input-icon-space(@input-height-small);
+.W-input-icon-space(@input-height-base);
+.W-input-icon-space(@input-height-large);
+

@@ -1755,7 +1755,7 @@ samp {
   padding: 0 0 10px;
 }
 .W-dialog {
-  position: absolute;
+  position: fixed;
   top: 120px;
   left: 10%;
   min-width: 350px;
@@ -2158,6 +2158,337 @@ samp {
   padding: 6px 15px 7px;
   font-size: 14px;
   border-radius: 4px;
+}
+.W-input-s {
+  position: relative;
+  display: inline-block;
+}
+.W-input-s input {
+  height: 24px;
+  padding: 0 7px;
+}
+.W-input-m {
+  position: relative;
+  display: inline-block;
+}
+.W-input-m input {
+  height: 32px;
+  padding: 0 7px;
+}
+.W-input-l {
+  position: relative;
+  display: inline-block;
+}
+.W-input-l input {
+  height: 36px;
+  padding: 0 7px;
+}
+.W-input-prefix input {
+  padding-left: 28px;
+}
+.W-input-prefix-icon {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  text-align: center;
+  width: 28px;
+  line-height: 20px;
+}
+.W-input-suffix input {
+  padding-right: 28px;
+}
+.W-input-suffix-icon {
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  text-align: center;
+  width: 28px;
+  line-height: 20px;
+}
+.W-input-prefix input {
+  padding-left: 28px;
+}
+.W-input-prefix-icon {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  text-align: center;
+  width: 28px;
+  line-height: 28px;
+}
+.W-input-suffix input {
+  padding-right: 28px;
+}
+.W-input-suffix-icon {
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  text-align: center;
+  width: 28px;
+  line-height: 28px;
+}
+.W-input-prefix input {
+  padding-left: 28px;
+}
+.W-input-prefix-icon {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  text-align: center;
+  width: 28px;
+  line-height: 32px;
+}
+.W-input-suffix input {
+  padding-right: 28px;
+}
+.W-input-suffix-icon {
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  text-align: center;
+  width: 28px;
+  line-height: 32px;
+}
+.W-radio {
+  display: inline-block;
+  padding: 0 8px;
+  cursor: pointer;
+}
+.W-radio-icon {
+  font-size: 32px;
+  vertical-align: middle;
+  padding: 0 8px;
+}
+.W-checkbox {
+  display: inline-block;
+  padding: 0 8px;
+  cursor: pointer;
+}
+.W-checkbox-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+.W-checkbox-icon + span {
+  vertical-align: middle;
+}
+.W-checkbox-checked {
+  height: 14px;
+  width: 14px;
+  border: 1px solid #19be6b;
+  background-color: yellowgreen;
+  border-radius: 2px;
+  transition: border-color, background-color ease-in-out 0.2s;
+}
+.W-checkbox-unchecked {
+  height: 14px;
+  width: 14px;
+  border: 1px solid #dddee1;
+  border-radius: 2px;
+  transition: border-color, background-color ease-in-out 0.2s;
+}
+.W-timePicker {
+  display: inline-block;
+  line-height: normal;
+  width: 168px;
+  position: relative;
+}
+.W-timePicker-rel {
+  position: relative;
+}
+.W-timePicker-rel-wrapper {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  vertical-align: middle;
+  line-height: normal;
+}
+.W-timePicker-rel-icon {
+  display: inline-block;
+  font-family: Ionicons;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  text-align: center;
+  color: #80848f;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+}
+.W-timePicker-rel-input {
+  display: inline-block;
+  width: 100%;
+  height: 32px;
+  line-height: 1.5;
+  padding: 4px 7px;
+  font-size: 12px;
+  border: 1px solid #dddee1;
+  border-radius: 4px;
+  color: #495060;
+  background-image: none;
+  position: relative;
+  cursor: text;
+  outline: none;
+  transition: border 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.W-timePicker-rel-input-focus {
+  border: 1px solid #2d8cf0;
+  box-shadow: 0 1px 6px #2d8cf0;
+}
+.W-timePicker-rel-input:hover {
+  border: 1px solid #2d8cf0;
+}
+.W-timePicker-dropdown {
+  transform-origin: center top 0px;
+  margin: 5px 0;
+  padding: 0;
+  overflow: visible;
+  max-height: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 32px;
+  right: 0;
+  z-index: 900;
+  display: none;
+}
+.W-timePicker-dropdown-rel {
+  display: flex;
+}
+.W-timePicker-dropdown-footer {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #dddee1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.W-timePicker-dropdown-footer button {
+  width: 40px;
+  height: 26px;
+  border: none;
+  margin-right: 10px;
+  transition: all .3s ease;
+  cursor: pointer;
+  outline: none;
+}
+.W-timePicker-dropdown-btnl {
+  background-color: white;
+  color: #495060;
+}
+.W-timePicker-dropdown-btnl:hover {
+  color: rgba(45, 140, 240, 0.9);
+}
+.W-timePicker-dropdown-btnr {
+  background-color: rgba(45, 140, 240, 0.9);
+  color: white;
+  border-radius: 4px;
+}
+.W-timePicker-dropdown-content-star {
+  display: flex;
+}
+.W-timePicker-dropdown-content-end {
+  display: flex;
+}
+.W-timePicker-dropdown-ul {
+  width: 55px;
+  height: 144px;
+  overflow: auto;
+}
+.W-timePicker-dropdown-ul li {
+  height: 24px;
+  width: 100%;
+  text-align: center;
+  line-height: 24px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.W-timePicker-dropdown-ul li:hover {
+  background-color: #57a3f3;
+  color: white;
+}
+.W-timePicker-dropdown-ul p {
+  height: 24px;
+  width: 100%;
+}
+.W-timePicker-dropdown-ulm {
+  border-left: 1px solid #dddee1;
+}
+.W-timePicker-dropdown-uls {
+  border-left: 1px solid #dddee1;
+}
+.W-timePicker-dropdown-li-select {
+  color: rgba(45, 140, 240, 0.9);
+}
+.W-timePicker-dropdown-title {
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-bottom: 1px solid #dddee1;
+}
+.W-timePicker-dropdown ::-webkit-scrollbar {
+  display: none;
+}
+.W-timePicker-dropdown-disabled {
+  cursor: not-allowed !important;
+  color: #bbbec4;
+}
+.W-inputNumber:hover {
+  border-color: #2d8cf0;
+}
+.W-inputNumber {
+  display: flex;
+  position: relative;
+  border: 1px solid #dddee1;
+  border-radius: 4px;
+}
+.W-inputNumber > input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+.W-inputNumber > input:focus {
+  box-shadow: 0 1px 6px #2d8cf0;
+}
+.W-inputNumber > div {
+  width: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #dddee1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.W-inputNumber > div > a {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbbec4;
+}
+.W-inputNumber > div > a:hover {
+  color: #2d8cf0;
+}
+.W-inputNumber-a {
+  border-bottom: 1px solid #dddee1;
+}
+.W-inputNumber-disable {
+  cursor: not-allowed !important;
+  color: #f3f3f3 !important;
 }
 
 /*# sourceMappingURL=index.css.map */

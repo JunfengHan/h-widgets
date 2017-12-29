@@ -18,6 +18,7 @@
   "author": "sunteng.com@wuhan",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.21.0",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.2",
     "gulp-sourcemaps": "^2.6.1",

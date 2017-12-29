@@ -92,7 +92,7 @@ define(function(require, exports){
 			return this;
 		},
 		getValue: function(){
-			var data = this.$doms.input.val()
+			var data = this.$doms.input.val();
 			data = data=="false"? false : true;
 			return data;
 		},
@@ -113,4 +113,4 @@ define(function(require, exports){
 		}
 	});
 	exports.base = Base;
-})
+});
